@@ -6,10 +6,17 @@
 
 <body>
   <%- @getBlock("scripts").toHTML() %>
+
   <table align=left border=1 width=300px ><tr><td>
-    <h1>فهرست</h1>
+    <h1>فهرست کتاب</h1>
+    <ul>
+    <% for article in @getCollection("html").findAllLive({relativeOutDirPath: "articles"}).toJSON(): %>
+    <li><a href=<%- article.url %>><%= article.title %></a></li>
+    <% end %>
+    </ul>
   </td></tr></table>
 
+  
   <%- @content %>
 
 </body>
