@@ -1,0 +1,7 @@
+body {
+    direction: rtl;
+}
+
+li {
+ margin-right: 24px;
+}

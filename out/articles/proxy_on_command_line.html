@@ -1,0 +1,71 @@
+<html>
+<head>
+  <link  rel="stylesheet" href="/style/style.css" />
+  <meta name="generator" content="DocPad v6.69.0" />
+</head>
+
+<body>
+  
+  <!-- show the chapters -->
+  <table align=left border=1 width=300px ><tr><td>
+    <h1>فهرست کتاب</h1>
+    <ul>
+    
+    <li><a href=/articles/common_shell_commands.html>دستورات معمول خط فرمان</a></li>
+    
+    <li><a href=/articles/common_steps_after_desktop_install.html>قدم های مرسوم بعد از نصب لینوکس دسکتاپ</a></li>
+    
+    <li><a href=/articles/get_help.html>کمک گرفتن و ادامه راه</a></li>
+    
+    <li><a href=/articles/how_to_connect_domain_and_host.html>چگونه یک دامین و یک هاست را به یکدیگر متصل کنیم</a></li>
+    
+    <li><a href=/articles/how_to_install_software.html>نصب نرم افزارها</a></li>
+    
+    <li><a href=/articles/how_to_learn_x.html>چگونه فلان چیز را یاد بگیرم</a></li>
+    
+    <li><a href=/articles/linux_as_a_job.html>لینوکس به عنوان شغل</a></li>
+    
+    <li><a href=/articles/linux_philosophy.html>فلسفه ازادی نرم‌افزار</a></li>
+    
+    <li><a href=/articles/proxy_on_command_line.html>استفاده از پروکسی در خط فرمان</a></li>
+    
+    <li><a href=/articles/trying_linux_with_a_live_distro.html>استفاده از لینوکس با دیسک زنده</a></li>
+    
+    <li><a href=/articles/what_is_distribution.html>توزیع ها و انتخاب یک توزیع مناسب</a></li>
+    
+    <li><a href=/articles/where_do_we_use_linux.html>کاربردهای لینوکس</a></li>
+    
+    <li><a href=/articles/which_arch_32bits_vs_64bit.html>معماری های لینوکس</a></li>
+    
+    <li><a href=/articles/which_desktop_is_best_for_you.html>چه دسکتاپی برای من بهتر است</a></li>
+    
+    <li><a href=/articles/which_distro_is_best_for_you.html>چه توزیعی برای من بهتر است</a></li>
+    
+    </ul>
+  </td></tr></table>
+
+
+  <p><strong>منطقا باید منتقل بشه به خط فرمان</strong></p>
+
+<p>ایران یکی از سانسور کننده‌ترین کشورهای جهان است و اینترنت در ایران دومین اینترنت سانسور شده دنیا. به همین خاطر اینترنت بدون پروکسی عملا در ایران کاربردی ندارد. البته پروکسی‌ها در دنیای بیرون از ایران هم کاربرد دارند. مثلا بسیاری از شرکت‌ها برای جدا کردن شبکه داخلی‌شان از اینترنت، از یک پروکسی استفاده می‌کنند و اگر شما بخواهید کاری با اینترنت انجام دهید، لازم است تنظیمات صحیح پروکسی را وارد کنید.</p>
+
+<p>این روزها در گنوم و در کی.دی.ای امکان تنظیم مرکزی پروکسی فراهم است و بعضی برنامه‌ها هم خودشان این امکان را به شکل مستقل دارند. اما اگر مثل یک نینجای گنو/لینوکسی در خط فرمان باشید چه؟ در خط فرمان Bash، این متغیرها می‌توانند وظیفه تنظیم پروکسی برای پروتکل‌های مختلف را بر عهده بگیرند:</p>
+
+<p>HTTP_PROXY<br />HTTPS_PROXY<br />FTP_PROXY<br />GOPHER_PROXY<br />WAIS_PROXY<br />مثلا اگر من بخواهم با برنامه apt-get با استفاده از یک پروکسی چیزی نصب کنم باید بزنم:</p>
+
+<p>$ sudo su -</p>
+
+<h1>export HTTP_PROXY=<a href='http://proxy:port'>http://proxy:port</a></h1>
+
+<h1>export HTTPS_PROXY=<a href='http://proxy:port'>http://proxy:port</a></h1>
+
+<h1>apt-get install zim</h1>
+
+<p>اول کاربر را به کاربر ریشه تغییر می دهم، بعد متغیرهای مربوط به پروکسی را مقداردهی و اکسپورت می کنم (اگر متوجه نشده‌اید که به جای پروکسی و پورت باید مقدار مورد استفاده خودتان را بگذارید شاید این راهنما برای شما نوشته نشده باشد) و بعد برنامه را مطابق معمول نصب می‌کند - اما حالا برنامه apt-get در هنگام استفاده از پروتکل های http و https با نگاه به متغیرهای مربوط به آن‌ها، از پروکسی مرتبط استفاده خواهد کرد.</p>
+
+<p>پیوند به بیرون</p>
+
+<p><a href="http://cyletech.blogspot.de/2013/06/blog-post_8.html">برای ترمینال از پروکسی همراه معتبر‌سازی استفاده کنیم</a></p>
+
+</body>
+</html> 

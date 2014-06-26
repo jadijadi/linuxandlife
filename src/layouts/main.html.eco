@@ -1,0 +1,16 @@
+<html>
+<head>
+  <%- @getBlock("styles").add(["/style/style.css"]).toHTML() %>
+  <%- @getBlock("meta").toHTML() %>
+</head>
+
+<body>
+  <%- @getBlock("scripts").toHTML() %>
+  <table align=left border=1 width=300px ><tr><td>
+    <h1>فهرست</h1>
+  </td></tr></table>
+
+  <%- @content %>
+
+</body>
+</html>

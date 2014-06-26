@@ -1,0 +1,72 @@
+<html>
+<head>
+  <link  rel="stylesheet" href="/style/style.css" />
+  <meta name="generator" content="DocPad v6.69.0" />
+</head>
+
+<body>
+  
+  <!-- show the chapters -->
+  <table align=left border=1 width=300px ><tr><td>
+    <h1>فهرست کتاب</h1>
+    <ul>
+    
+    <li><a href=/articles/common_shell_commands.html>دستورات معمول خط فرمان</a></li>
+    
+    <li><a href=/articles/common_steps_after_desktop_install.html>قدم های مرسوم بعد از نصب لینوکس دسکتاپ</a></li>
+    
+    <li><a href=/articles/get_help.html>کمک گرفتن و ادامه راه</a></li>
+    
+    <li><a href=/articles/how_to_connect_domain_and_host.html>چگونه یک دامین و یک هاست را به یکدیگر متصل کنیم</a></li>
+    
+    <li><a href=/articles/how_to_install_software.html>نصب نرم افزارها</a></li>
+    
+    <li><a href=/articles/how_to_learn_x.html>چگونه فلان چیز را یاد بگیرم</a></li>
+    
+    <li><a href=/articles/linux_as_a_job.html>لینوکس به عنوان شغل</a></li>
+    
+    <li><a href=/articles/linux_philosophy.html>فلسفه ازادی نرم‌افزار</a></li>
+    
+    <li><a href=/articles/proxy_on_command_line.html>استفاده از پروکسی در خط فرمان</a></li>
+    
+    <li><a href=/articles/trying_linux_with_a_live_distro.html>استفاده از لینوکس با دیسک زنده</a></li>
+    
+    <li><a href=/articles/what_is_distribution.html>توزیع ها و انتخاب یک توزیع مناسب</a></li>
+    
+    <li><a href=/articles/where_do_we_use_linux.html>کاربردهای لینوکس</a></li>
+    
+    <li><a href=/articles/which_arch_32bits_vs_64bit.html>معماری های لینوکس</a></li>
+    
+    <li><a href=/articles/which_desktop_is_best_for_you.html>چه دسکتاپی برای من بهتر است</a></li>
+    
+    <li><a href=/articles/which_distro_is_best_for_you.html>چه توزیعی برای من بهتر است</a></li>
+    
+    </ul>
+  </td></tr></table>
+
+
+  <p>برای اضافه کردن یک ساب دامین به یک دامین یا به عبارت بهتر برای اضافه کردن یک دامین به یک هاست، نیازمند قدم های مختلفی هستیم:</p>
+
+<p>تنظیم دی ان اس ها روی آن دامین یا ساب دامین = گفتن اینکه در صورت درخواست فلان دامنه (مثلا jadi3.undo.it) اینترنت باید درخواست کننده را به هاست ما هدایت کند<br />تنظیم وب سرور برای پاسخ مناسب دادن به آن دامین<br />توجه کنید که این جریان هیچ ربطی به مفهوم ساب دامین ندارد. ساب دامین هم درست مثل دامین عمل می کند: یک اسم است که توسط یک سرویس به نام DNS که وظیفه تبدیل آدرس های انسان-فهم اینترنتی به عددهای آی پی کامپیوتر-فهم را بر عهده گرفته. من شخصا از سرویس های دی ان اس رایگان روی اینترنت از جمله <a href='http://freedns.afraid.org'>http://freedns.afraid.org</a> برای کارهای عمومی ام استفاده می کنم. پس اولین قدم برای من رفتن به آنجا، رجیستر کردن دی ان اس مورد نظر و ارسال آن به آی پی سرویس دهنده وب است.</p>
+
+<p><img src=/images/freednsafraidorg.png></p>
+
+<p>حالا هر کس بزند jadi3.undo.it از آنجا به وب سرور من هدایت خواهد شد. قدم بعدی این است که به وب سرورم بگویم هر کس به این آدرس آمد کدام دایرکتوری به عنوان محتویات آن آدرس وب به او نمایش داده شود. من قبلا در تنظیمات آپاچی (که مثل همه تنظیمات دیگر در etc/ قرار دارد) داشتم:</p>
+
+<p><VirtualHost *><br />     ServerAdmin <a href='mailto:jadijadi@gmail.com'>jadijadi@gmail.com</a><br />     DocumentRoot /home/jadi/public_html/<br />     ServerName www.freekeyboard.net <br />     ErrorLog /home/jadi/www-error_log<br />     CustomLog /home/jadi/www-access_log combined<br />  </VirtualHost>''<br />و حالا فقط کافی است این را هم اضافه کنم که:</p>
+
+<p><VirtualHost *><br />     ServerAdmin <a href='mailto:jadijadi@gmail.com'>jadijadi@gmail.com</a><br />     DocumentRoot /home/jadi/public_html/<br />     ServerName jadi3.undo.it<br />     ErrorLog /home/jadi/www-error_log<br />     CustomLog /home/jadi/www-access_log.jadi common<br />  </VirtualHost><br />تا به وب سرور گفته باشم که اگر کسی اومد و با آدرس jadi3.undo.it کار داشت بهش محتویات فلان دایرکتوری رو نشون بده. می بنین که من اینجا همون دایرکتوری قبلی رو معرفی کردم و در نتیجه هر کس آدرس <a href='http://jadi3.undo.it'>http://jadi3.undo.it</a> رو بزنه به همون جایی می رسه که بقیه دامین های من می رسن. مشخصه که هر تغییری در فایل تنظیمات نیازمند ری استارت سرویس است. سرویس آپاچی رو ری استارت می کنم:</p>
+
+<p># /etc/init.d/apache2 restart<br />نکات مهم در مورد این مقاله</p>
+
+<ul>
+<li>دامین undo.it متعلق به من نیست. یک دامین آزاد است برای هر کسی که دوست دارد روی آن ساب دامین تعرف کند</li>
+<li>تلفظ صحیح دامین ظاهرا دومین است</li>
+<li>این مقاله نمی تواند راهنمای اینکار برای کسی باشد که درک نمی کند چکار می کند. دو قدم تنظیم دی ان اس و تنظیم وب سرور در هر محیط ممکن است به شکل متفاوتی انجام شود</li>
+<li>این روش برای مبارزه با سانسور توصیه نمی شود (: اول سانسورچی اینقدر کم خرد است که تمام اینترنت را سانسور کرده پس همه از فیلتر رد می شوند و دوم اینکه من قرار نیست با چهار نفر مشتری سایت هر روز در حال فرار باشم. طبق تجربه من سانسور حداکثر ده درصد خواننده ها را کم کرده و در عوض ماندن روی همین دامین هر روز خواننده های جدید را اضافه می کند.</li>
+<li>سرویس های دی ان اس درکل اینترنت باید پخش بشن. یعنی در لحظه تعریف سرور دی ان اس من می دونه که صاحب فلان دامین است و باید اونو به فلان آدرس بفرسته ولی طول می کشه اینو همه بفهمن. گفته می شه که لازمه بیست و چهار ساعت فرصت بدین تا همه دنیا بفهمن که این آدرس باید بره فلان جا</li>
+<li>اسم های دامنه رایگان (مثلا همین آندو دات ایت) بامزه هستن ولی خیلی خوب نیستن. مثلا اگر چیزی روی این آدرس ها درست کنین ممکنه از نظر خیلی از سایت ها ذاتا اسپم باشه (:</li>
+</ul>
+
+</body>
+</html> 
