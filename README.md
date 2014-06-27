@@ -10,3 +10,4 @@ linuxandlife
 - [ ] ordered index based on chapter order field
 - [x] connecting linuxbook.ir
 - [x] bootstrap
+- [ ] import articles from external links
