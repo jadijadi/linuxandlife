@@ -1,51 +1,58 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <link  rel="stylesheet" href="/style/style.css" />
-  <meta name="generator" content="DocPad v6.69.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link  rel="stylesheet" href="/style/style.css" /><link  rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" /><link  rel="stylesheet" href="/style/bootstrap-rtl.css" />
+  
+    <meta name="generator" content="DocPad v6.69.0" />
 </head>
 
-<body>
+<body role="document">
   
   <!-- show the chapters -->
-  <table align=left border=1 width=300px ><tr><td>
-    <h1>فهرست کتاب</h1>
-    <ul>
-    
-    <li><a href=/articles/common_shell_commands.html>دستورات معمول خط فرمان</a></li>
-    
-    <li><a href=/articles/common_steps_after_desktop_install.html>قدم های مرسوم بعد از نصب لینوکس دسکتاپ</a></li>
-    
-    <li><a href=/articles/get_help.html>کمک گرفتن و ادامه راه</a></li>
-    
-    <li><a href=/articles/how_to_connect_domain_and_host.html>چگونه یک دامین و یک هاست را به یکدیگر متصل کنیم</a></li>
-    
-    <li><a href=/articles/how_to_install_software.html>نصب نرم افزارها</a></li>
-    
-    <li><a href=/articles/how_to_learn_x.html>چگونه فلان چیز را یاد بگیرم</a></li>
-    
-    <li><a href=/articles/linux_as_a_job.html>لینوکس به عنوان شغل</a></li>
-    
-    <li><a href=/articles/linux_philosophy.html>فلسفه ازادی نرم‌افزار</a></li>
-    
-    <li><a href=/articles/proxy_on_command_line.html>استفاده از پروکسی در خط فرمان</a></li>
-    
-    <li><a href=/articles/trying_linux_with_a_live_distro.html>استفاده از لینوکس با دیسک زنده</a></li>
-    
-    <li><a href=/articles/what_is_distribution.html>توزیع ها و انتخاب یک توزیع مناسب</a></li>
-    
-    <li><a href=/articles/where_do_we_use_linux.html>کاربردهای لینوکس</a></li>
-    
-    <li><a href=/articles/which_arch_32bits_vs_64bit.html>معماری های لینوکس</a></li>
-    
-    <li><a href=/articles/which_desktop_is_best_for_you.html>چه دسکتاپی برای من بهتر است</a></li>
-    
-    <li><a href=/articles/which_distro_is_best_for_you.html>چه توزیعی برای من بهتر است</a></li>
-    
-    </ul>
-  </td></tr></table>
 
+    <div  class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">کتاب لینوکس و زندگی</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">روی جلد</a></li>
+            <li><a href="/about.html">درباره</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    
+    
+    
+  
+  <div class="container" role="main">
+  
+  <div class="row"><div class="row-md-10 top-space-reserver" ></div><div>
+  
+  <div class="row">
+  
+    <div class="row"><dic class="col-md-12"><br><br></div></div>
+     
+    <div class="col-md-8">
+    <h2>مفهوم نصب برنامه</h2>
 
-  <p>مفهوم نصب برنامه<br />مفهوم مدیر بسته<br />نصب با رابط گرافیکی مدیر بسته<br />نصب با مدیر بسته در خط فرمان<br />نصب از طریق کامپایل برنامه</p>
+<h2>مفهوم مدیر بسته</h2>
+
+<h2>نصب با رابط گرافیکی مدیر بسته</h2>
+
+<h2>نصب با مدیر بسته در خط فرمان</h2>
+
+<h2>نصب از طریق کامپایل برنامه</h2>
 
 <p>نکته اصلی در این روش اینه که معمولا نباید استفاده بشه (: در این روش سیستم عامل و مدیر بسته، چیزی از برنامه‌های نصب شده نمی‌داند و نمی‌تواند آنها را بروزرسانی کند. در عین حال این روش کمی سخت‌تر از روش‌های قبله و گاهی هم نیاز به حوصله و دقت و چیز یاد گرفتن داره.</p>
 
@@ -57,19 +64,33 @@
 
 <p>از بخش قبلی یادمان هست که RPM پسوند بسته‌های ردهتی است. پس از این یکی می‌گذریم چون در حال حاضر اوبونتو داریم. اگر نسخه آر پی امی (مثل زوزه و ردهت و فدورا) داشتیم، احتمالا کار به سادگی دانلود و دوبار کلیک کردن روی این فایل بود.<br />در قدم بعدی دنبال فایل‌هایی با پسوند tar.gz می‌گردم. فایل تار نتیجه چسابندن چند فایل به هم و فایل جی.زد. نتیجه فشرده کردن فایل‌ها است. به عبارت دیگر فایلی با پسوند تار.جی.زد، مجموعه چند فایل خواهد بود که به هم فشرده شده‌اند.<br />بین نسخه‌های موجود، به سراغ بالاترین نسخه می‌رویم. به شرطی که در مرحله بتا و آلفا و این چیزها نباشد. اینجا ظاهرا نسخه ۰.۸ بهترین نسخه است.<br />همان را دانلود می‌کنم.<br />حال فایل متنی برنامه را دارم. اول آن را از حالت فشرده خارج می‌کنم. در حالت گرافیکی به سادگی با کلیک راست و انتخاب Extract و در حالت متنی با دستوری شبیه به:</p>
 
-<p>$ tar xf sib-0.8.tar.bz2<br />حالا یک دایرکتوری سیب دارم که داخلش می‌شوم و فایل‌هایش را بررسی می‌کنم.</p>
+<pre >
+$ tar xf sib-0.8.tar.bz2
+</pre >
 
-<p>jadi@jubun:~/Desktop$ cd sib-0.8/<br />jadi@jubun:~/Desktop/sib-0.8$ ls<br />AUTHORS  ChangeLog  COPYING  makefile  misc  pixmaps  README  src  tools<br />تقریبا همیشه فایلی هست که شروع کار باشد. اینجا اسمش README است، ممکن است دیگران اسم‌هایی مثل read.me یا read.first یا هر چیز دیگری بگذارند ولی کامل امشخص است که از کجا باید شروع کرد. در انتهای این فایل به سادگی نوشته:</p>
+حالا یک دایرکتوری سیب دارم که داخلش می‌شوم و فایل‌هایش را بررسی می‌کنم.
 
-<h1>Basic Installation</h1>
+<pre>
+jadi@jubun:~/Desktop$ cd sib-0.8/
+jadi@jubun:~/Desktop/sib-0.8$ ls
+AUTHORS  ChangeLog  COPYING  makefile  misc  pixmaps  README  src  tools
+</pre >
 
-<ol>
-<li>make  </li>
-<li>make install ( root user )
-به همین سادگی! در این مورد حتی نیازی به قدم سخت configure/. هم نیست. در بسیاری از موارد اول باید دستور configure/. را تایپ کنید تا چک کند که سیستم شما دارای همه موارد مورد نیاز برای نصب یک برنامه باشد و بعد برنامه را کامپایل و بعد نصب کنید. سه قدم مشهور اینها هستند:</li>
-</ol>
+تقریبا همیشه فایلی هست که شروع کار باشد. اینجا اسمش README است، ممکن است دیگران اسم‌هایی مثل read.me یا read.first یا هر چیز دیگری بگذارند ولی کامل امشخص است که از کجا باید شروع کرد. در انتهای این فایل به سادگی نوشته:
 
-<p>./configure<br />make<br />sudo make install<br />این سه دستور معمولا تمام برنامه‌ها را نصب می‌کنند مگر اینکه در راهنمای نصب برنامه، چیز دیگری نوشته شده باشد. البته باید توجه کنید که بخش کانفیگور معمولا در دفعات اول به Errorهایی مبنی بر نبودن یکی دو کتابخانه یا برنامه لازم برای اجرای این برنامه می‌خورد که باید جدا جدا آن‌ها را پیدا و نصب کنید و دوباره کانفیگور را اجرا کند. بدون اجرای موفق کانفیگور، شانسی برای نصب نخواهید داشت (: بهترین روش هم جستجو است در مدیر نصب برنامه گرافیکی (مثلا Synaptic) به دنبال اسم برنامه‌هایی که کانفیگور از آن‌ها ایراد نصب گرفته است.</p>
+<pre>
+Basic Installation
+==================
+
+ 1. make  
+ 2. make install ( root user )
+</pre>
+
+<p>به همین سادگی! در این مورد حتی نیازی به قدم سخت configure/. هم نیست. در بسیاری از موارد اول باید دستور configure/. را تایپ کنید تا چک کند که سیستم شما دارای همه موارد مورد نیاز برای نصب یک برنامه باشد و بعد برنامه را کامپایل و بعد نصب کنید. سه قدم مشهور اینها هستند:</p>
+
+<p><pre ><br />./configure<br />make<br />sudo make install<br /></pre ></p>
+
+<p>این سه دستور معمولا تمام برنامه‌ها را نصب می‌کنند مگر اینکه در راهنمای نصب برنامه، چیز دیگری نوشته شده باشد. البته باید توجه کنید که بخش کانفیگور معمولا در دفعات اول به Errorهایی مبنی بر نبودن یکی دو کتابخانه یا برنامه لازم برای اجرای این برنامه می‌خورد که باید جدا جدا آن‌ها را پیدا و نصب کنید و دوباره کانفیگور را اجرا کند. بدون اجرای موفق کانفیگور، شانسی برای نصب نخواهید داشت (: بهترین روش هم جستجو است در مدیر نصب برنامه گرافیکی (مثلا Synaptic) به دنبال اسم برنامه‌هایی که کانفیگور از آن‌ها ایراد نصب گرفته است.</p>
 
 <p>متاسفانه این برنامه configure/. ندارد که دقیق به ما بگوید آیا همه نیازمندی‌های برنامه نصب هستند یا نه در نتیجه - به شکل منطقی و کاری که از اول باید می‌شد - به فایل README رجوع می‌کنم و می‌خوانم که برنامه به این‌ها نیاز دارد: pygtk (>= 2.10)، python-sqlite2 و python-notify (>=0.1). حتی اگر نمی‌دانم اینها چیستند، Synaptic را باز می‌کنم و دنبالشان می‌گردم:</p>
 
@@ -79,19 +100,68 @@
 
 <p>حالا که وابستگی‌ها نصب شده‌اند، طبق دستور README اول make را اجرا می‌کنم و</p>
 
-<p>$ make<br />for d in src; do make -C $d; [ $? = 0 ] || exit 1 ; done<br />make[1]: Entering directory <code>/home/jadi/Desktop/sib-0.8/src'<br />Byte-compiling python modules...<br />bgl2sdb.py dbmanager.py dbquery.py prefrence.py sib.py<br />Byte-compiling python modules (optimised versions) ...<br />bgl2sdb.py dbmanager.py dbquery.py prefrence.py sib.py<br />make[1]: Leaving directory</code>/home/jadi/Desktop/sib-0.8/src'<br />و بعد برای نصب در سیستم، make install را با دسترسی مدیرسیستم (و برای اینکار یک sudo جلوی دستور می‌گذارم):</p>
+<p><pre ><br />$ make<br />for d in src; do make -C $d; [ $? = 0 ] || exit 1 ; done<br />make[1]: Entering directory <code>/home/jadi/Desktop/sib-0.8/src'<br />Byte-compiling python modules...<br />bgl2sdb.py dbmanager.py dbquery.py prefrence.py sib.py<br />Byte-compiling python modules (optimised versions) ...<br />bgl2sdb.py dbmanager.py dbquery.py prefrence.py sib.py<br />make[1]: Leaving directory</code>/home/jadi/Desktop/sib-0.8/src'<br /></pre ></p>
 
-<p>$ sudo make install<br />mkdir -p /usr/share/sib<br />mkdir -p /usr/share/pixmaps/sib<br />mkdir -p /usr/share/applications<br />mkdir -p /usr/share/gnome/autostart<br />mkdir -p /usr/bin<br />install -m644 COPYING /usr/share/sib/.<br />install -m644 pixmaps/*.png /usr/share/pixmaps/sib/.<br />install -m755 misc/sib /usr/bin/.<br />حالا احتمالا برنامه باید به درستی نصب شده باشد. آن را اجرا می‌کنم (:</p>
+<p>و بعد برای نصب در سیستم، make install را با دسترسی مدیرسیستم (و برای اینکار یک sudo جلوی دستور می‌گذارم):</p>
 
-<p>$ sib<br />Traceback (most recent call last):<br />  File "sib.py", line 411, in <module><br />    main()<br />  File "sib.py", line 179, in <strong>init</strong><br />    self.DB_con = dbquery.Database(<strong>DATADIR</strong>)<br />  File "/usr/share/sib/dbquery.py", line 51, in <strong>init</strong><br />    self.list_of_db()<br />  File "/usr/share/sib/dbquery.py", line 61, in list_of_db<br />    DBdir = os.listdir(self.home)<br />OSError: [Errno 2] No such file or directory: '/home/jadi/.sib/'<br />مثل اینکه درست اجرا نشد (: خطوط را می‌خوانم. این کاری است که نصب از سورس را کمی سخت کرده ولی فراموش نکنید که اگر مشغول نصب یک برنامه از فایل سورس هستید، یعنی در دنیای حرفه‌ای ها پا گذاشته‌اید و نباید از چیزی بترسید. خط آخر به وضوح نوشته که نمی‌تواند دایرکتوری sib. را در خانه من پیدا کند. این یک اشکال در روند نصب است. اول این ایراد را به نویسنده برنامه اطلاع می‌دهم و بعد خودم دستی یک دایرکتوری به نام sib. در خانه می‌سازم. ''</p>
+<p><pre ><br />$ sudo make install<br />mkdir -p /usr/share/sib<br />mkdir -p /usr/share/pixmaps/sib<br />mkdir -p /usr/share/applications<br />mkdir -p /usr/share/gnome/autostart<br />mkdir -p /usr/bin<br />install -m644 COPYING /usr/share/sib/.<br />install -m644 pixmaps/*.png /usr/share/pixmaps/sib/.<br />install -m755 misc/sib /usr/bin/.<br /></pre ><br />حالا احتمالا برنامه باید به درستی نصب شده باشد. آن را اجرا می‌کنم (:</p>
 
-<p>$ mkdir ~/.sib<br />$ sib<br />و حالا سیب به خوبی اجرا می‌شود. مطمئنا از این به بعددیگر آن را از منو اجرا خواهم کرد و نه از خط فرمان.</p>
+<p><pre ><br />$ sib<br />Traceback (most recent call last):<br />  File "sib.py", line 411, in <module><br />    main()<br />  File "sib.py", line 179, in <strong>init</strong><br />    self.DB_con = dbquery.Database(<strong>DATADIR</strong>)<br />  File "/usr/share/sib/dbquery.py", line 51, in <strong>init</strong><br />    self.list_of_db()<br />  File "/usr/share/sib/dbquery.py", line 61, in list_of_db<br />    DBdir = os.listdir(self.home)<br />OSError: [Errno 2] No such file or directory: '/home/jadi/.sib/'<br /></pre ></p>
+
+<p>مثل اینکه درست اجرا نشد (: خطوط را می‌خوانم. این کاری است که نصب از سورس را کمی سخت کرده ولی فراموش نکنید که اگر مشغول نصب یک برنامه از فایل سورس هستید، یعنی در دنیای حرفه‌ای ها پا گذاشته‌اید و نباید از چیزی بترسید. خط آخر به وضوح نوشته که نمی‌تواند دایرکتوری sib. را در خانه من پیدا کند. این یک اشکال در روند نصب است. اول این ایراد را به نویسنده برنامه اطلاع می‌دهم و بعد خودم دستی یک دایرکتوری به نام sib. در خانه می‌سازم. ''</p>
+
+<p><pre ><br />$ mkdir ~/.sib<br />$ sib<br /></pre ></p>
+
+<p>و حالا سیب به خوبی اجرا می‌شود. مطمئنا از این به بعددیگر آن را از منو اجرا خواهم کرد و نه از خط فرمان.</p>
 
 <p>بگذارید یک نگاه دیگر به کل روند بیندازیم:</p>
 
 <p>فایل را دریافت کردیم<br />فایل را از حالت فشرده خارج کردیم<br />در اینجا نه، اما در حالت معمول با configure/. داشتن تمام نیازهای برنامه را بررسی کردیم<br />آنقدر کتابخانه و برنامه جانبی نصب کردیم تا کانفیگور مطمئن شود که همه چیز مرتب است و با موفقیت اجرا بشود<br />بعد دستور make را اجرا کردیم تا برنامه کامپایل شود و فایل اجرایی ساخته شود<br />در نهایت sudo make install با دسترسی مدیر سیستم، فایل اجرایی و فایل‌های تنظیمات را در جاهایی که لازم بودند ساخت<br />و حالا برنامه ما نصب شده است (: تنها سه نکته دیگر را باید اضافه کنم:</p>
 
 <p>نترسید. کامپایل برنامه یک کار حرفه‌ای است و شما مشغول یک کار جدی. با حوصله باشید و چیز یاد بگیرید.<br />اکثر برنامه‌ها علاوه بر بسته معمولی نیاز به بسته‌هایی که در انتهای اسمشان dev- باشد هم دارند. اگر بسته‌ای را نصب می‌کنید و هنوز مشکل‌دارید، نسخه dev- را هم نصب کنید.<br />اکثر سیستم‌ها خیلی از بسته‌های مورد نیاز برای کامپایل برنامه را در یک بسته بزرگ مجازی جمع کرده‌اند. ایده خوبی است که قبل از نصب و به جای جواب به تک تک وابستگی‌ها، اول آن را نصب کنید. در اوبونتو اسم این بسته مجازی build-essential است.</p>
-
+    </div > <!-- content -->
+    
+    
+    <div class="col-md-3" >
+      <a href="#" class="list-group-item active">فهرست کتاب</a>
+      
+      <a class="list-group-item" href=/articles/common_shell_commands.html>دستورات معمول خط فرمان</a>
+      
+      <a class="list-group-item" href=/articles/common_steps_after_desktop_install.html>قدم های مرسوم بعد از نصب لینوکس دسکتاپ</a>
+      
+      <a class="list-group-item" href=/articles/get_help.html>کمک گرفتن و ادامه راه</a>
+      
+      <a class="list-group-item" href=/articles/how_to_connect_domain_and_host.html>چگونه یک دامین و یک هاست را به یکدیگر متصل کنیم</a>
+      
+      <a class="list-group-item" href=/articles/how_to_install_software.html>نصب نرم افزارها</a>
+      
+      <a class="list-group-item" href=/articles/how_to_learn_x.html>چگونه فلان چیز را یاد بگیرم</a>
+      
+      <a class="list-group-item" href=/articles/linux_as_a_job.html>لینوکس به عنوان شغل</a>
+      
+      <a class="list-group-item" href=/articles/linux_philosophy.html>فلسفه ازادی نرم‌افزار</a>
+      
+      <a class="list-group-item" href=/articles/proxy_on_command_line.html>استفاده از پروکسی در خط فرمان</a>
+      
+      <a class="list-group-item" href=/articles/trying_linux_with_a_live_distro.html>استفاده از لینوکس با دیسک زنده</a>
+      
+      <a class="list-group-item" href=/articles/what_is_distribution.html>توزیع ها و انتخاب یک توزیع مناسب</a>
+      
+      <a class="list-group-item" href=/articles/where_do_we_use_linux.html>کاربردهای لینوکس</a>
+      
+      <a class="list-group-item" href=/articles/which_arch_32bits_vs_64bit.html>معماری های لینوکس</a>
+      
+      <a class="list-group-item" href=/articles/which_desktop_is_best_for_you.html>چه دسکتاپی برای من بهتر است</a>
+      
+      <a class="list-group-item" href=/articles/which_distro_is_best_for_you.html>چه توزیعی برای من بهتر است</a>
+      
+      </ul>
+    </div> <!--left menu-->
+    
+    
+    
+  </div> <!-- content row -->
+  </div> <!-- row full page -->
+  </div>
 </body>
 </html> 

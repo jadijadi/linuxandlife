@@ -13,16 +13,19 @@ title: چگونه یک دامین و یک هاست را به یکدیگر متص
 <img src=/images/freednsafraidorg.png>
 
 حالا هر کس بزند jadi3.undo.it از آنجا به وب سرور من هدایت خواهد شد. قدم بعدی این است که به وب سرورم بگویم هر کس به این آدرس آمد کدام دایرکتوری به عنوان محتویات آن آدرس وب به او نمایش داده شود. من قبلا در تنظیمات آپاچی (که مثل همه تنظیمات دیگر در etc/ قرار دارد) داشتم:
-
+<pre>
   <VirtualHost *>
      ServerAdmin jadijadi@gmail.com
      DocumentRoot /home/jadi/public_html/
      ServerName www.freekeyboard.net 
      ErrorLog /home/jadi/www-error_log
      CustomLog /home/jadi/www-access_log combined
-  </VirtualHost>''
+  </VirtualHost>
+</pre>
 و حالا فقط کافی است این را هم اضافه کنم که:
 
+
+<pre >
   <VirtualHost *>
      ServerAdmin jadijadi@gmail.com
      DocumentRoot /home/jadi/public_html/
@@ -30,9 +33,13 @@ title: چگونه یک دامین و یک هاست را به یکدیگر متص
      ErrorLog /home/jadi/www-error_log
      CustomLog /home/jadi/www-access_log.jadi common
   </VirtualHost>
-تا به وب سرور گفته باشم که اگر کسی اومد و با آدرس jadi3.undo.it کار داشت بهش محتویات فلان دایرکتوری رو نشون بده. می بنین که من اینجا همون دایرکتوری قبلی رو معرفی کردم و در نتیجه هر کس آدرس http://jadi3.undo.it رو بزنه به همون جایی می رسه که بقیه دامین های من می رسن. مشخصه که هر تغییری در فایل تنظیمات نیازمند ری استارت سرویس است. سرویس آپاچی رو ری استارت می کنم:
+</pre >
 
+
+تا به وب سرور گفته باشم که اگر کسی اومد و با آدرس jadi3.undo.it کار داشت بهش محتویات فلان دایرکتوری رو نشون بده. می بنین که من اینجا همون دایرکتوری قبلی رو معرفی کردم و در نتیجه هر کس آدرس http://jadi3.undo.it رو بزنه به همون جایی می رسه که بقیه دامین های من می رسن. مشخصه که هر تغییری در فایل تنظیمات نیازمند ری استارت سرویس است. سرویس آپاچی رو ری استارت می کنم:
+<pre>
   # /etc/init.d/apache2 restart
+</pre >
 نکات مهم در مورد این مقاله
 
 - دامین undo.it متعلق به من نیست. یک دامین آزاد است برای هر کسی که دوست دارد روی آن ساب دامین تعرف کند

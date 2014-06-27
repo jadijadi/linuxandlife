@@ -1,7 +1,11 @@
-body {
-    direction: rtl;
+pre {
+    direction: ltr;
 }
 
-li {
- margin-right: 24px;
+.top-space-reserver {
+  margin-top: 32pt;
+}
+
+img {
+  max-width: 750px;
 }
