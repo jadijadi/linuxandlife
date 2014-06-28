@@ -1,13 +1,11 @@
-linuxandlife
-============
-
-کتاب راهنمای لینوکس و زندگی
+کتابی برای کشف دنیای پشت لینوکس و درک بهتر از زندگی
 
 # todo
-- [ ] simple clean first page
+
+- [ ] import articles from external links
 - [ ] Droid font
 - [ ] nested index based on chapter names
 - [ ] ordered index based on chapter order field
 - [x] connecting linuxbook.ir
 - [x] bootstrap
-- [ ] import articles from external links
+- [x] simple clean first page
