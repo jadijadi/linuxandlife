@@ -3,11 +3,12 @@
 
 # todo
 
-- [ ] import articles from external links
-- [ ] Droid font
+- [ ] cerate all requried pages even if thye are empty
+- [ ] highlight the article we are reading on the menu
+- [x] import articles from external links
+- [x] Droid font
 - [x] order of the table of contents
 - [x] show chapter title in rows and only once
-- [ ] cerate all requried pages even if thye are empty
 
 # usage
 
