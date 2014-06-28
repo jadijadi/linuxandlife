@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%- @getBlock("styles").add(["/style/style.css", "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css", "/style/bootstrap-rtl.css"]).toHTML() %>
+  <%- @getBlock("styles").add(["//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css", "/style/bootstrap-rtl.css","http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css","/style/style.css"]).toHTML() %>
   
     <%- @getBlock("meta").toHTML() %>
 </head>
@@ -49,10 +49,17 @@
     
     
     <div class="col-md-3" >
-      <a href="#" class="list-group-item active">فهرست کتاب</a>
-      <% for article in @getCollection("html").findAllLive({relativeOutDirPath: "articles"}).toJSON(): %>
-      <a class="list-group-item" href=<%- article.url %>><%= article.title %></a>
+      <a href="#" class="list-group-item active"><strong>فهرست</strong></a>
+      <a href="/about.html" class="list-group-item">درباره کتاب لینوکس و زندگی</a>
+
+      <% for article in @getCollection("html").findAllLive({relativeOutDirPath: "articles"},[{order:1}]).toJSON(): %>
+        <% if article.chapter != @previous_chapter : %>
+			<a class="list-group-item active" ><%= article.chapter %></a>
+          <% @previous_chapter = article.chapter %>
+        <% end %>
+		<a class="list-group-item" href=<%- article.url %>><%= article.title %></a>
       <% end %>
+      
       </ul>
     </div> <!--left menu-->
     

@@ -6,8 +6,6 @@ linuxandlife
 # todo
 - [ ] simple clean first page
 - [ ] Droid font
-- [ ] nested index based on chapter names
-- [ ] ordered index based on chapter order field
-- [x] connecting linuxbook.ir
-- [x] bootstrap
-- [x] import articles from external links
+- [x] order the table of contents
+- [x] show chapter title in rows and only once
+- [ ] cerate all requried pages even if thye are empty
