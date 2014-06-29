@@ -1,44 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
 
-  <%- @getBlock("styles").add(["/style/style.css", "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css", "/style/bootstrap-rtl.css", "http://getbootstrap.com/examples/cover/cover.css"]).toHTML() %>
+<%- @partial("head") %>
   
-    <%- @getBlock("meta").toHTML() %>
-</head>
-
-<body >
-  <%- @getBlock("scripts").toHTML() %>
-  <!-- show the chapters -->
-
-  
-  
+<%- @getBlock("styles").add(["http://getbootstrap.com/examples/cover/cover.css"]).toHTML() %>  
+<div class=clearfix ></div>
     <div class="container site-wrapper">
 
-      <div class="site-wrapper-inner">
+      <div class="site-wrapper-inner" >
 
         <div class="cover-container">
 
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">کتاب لینوکس و زندگی</h3>
-              <ul class="nav masthead-nav">
-                <li ><a href="about.html">درباره</a></li>
-              </ul>
-            </div>
-          </div>
 
-          <div class="inner cover">
+          <div class="inner cover"  style="margin-top:120px">
  <%- @content %>
-          </div>
-<br />
-          <div class="mastfoot">
-            <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-            </div>
           </div>
 
         </div>
@@ -47,6 +20,6 @@
 
     </div>
 
-    
+</div>
 </body>
-</html> 
+</html>
