@@ -21,6 +21,20 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .footer {
 	text-align: center;
-	font-size: 0.8em;
+	font-size: 1em;
 	direction: rtl;
 }
+
+.articletitle {
+	margin-bottom: 24px;
+}
+
+blockquote {
+	font-size: 1.2em;
+}
+
+p {
+	font-size: 1.1em;
+	line-height: normal;
+}
+	

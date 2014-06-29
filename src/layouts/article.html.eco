@@ -9,6 +9,7 @@
     <div class="row"><dic class="col-md-12"><br><br></div></div>
      
     <div class="col-md-8">
+<h1 class="articletitle"><%- @document.title %></h1>		
 <%- @content %>
     </div > <!-- content -->
     
