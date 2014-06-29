@@ -3,7 +3,7 @@
 
 # todo
 
-- [ ] move all IMG from internet to local repo. grep http:// in documents
+- [x] move all IMG from internet to local repo. grep http:// in documents
 - [ ] cerate all requried pages even if thye are empty
 - [ ] highlight the article we are reading on the menu
 - [x] move template parts to seperated layout files
