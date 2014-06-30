@@ -5,7 +5,7 @@
 
 - [ ] move some important parts to config
 - [ ] cerate all requried pages even if thye are empty
-- [ ] highlight the article we are reading on the menu
+- [x] highlight the article we are reading on the menu
 - [ ] create a Donation page + donation link on menu
 - [ ] Export to epub
 - [ ] Export to PDF
