@@ -1,10 +1,9 @@
-# DocPad Configuration File
-# http://docpad.org/docs/config
-
-# Define the DocPad Configuration
+# Define the Configuration
 docpadConfig = {
-	# ...
+	templateData:
+		site:
+			title: "کتاب لینوکس و زندگی |‌ راهنمای گیک‌های جوان"
 }
 
-# Export the DocPad Configuration
+# Export the Configuration
 module.exports = docpadConfig

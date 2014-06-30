@@ -3,7 +3,7 @@
 
 # todo
 
-- [ ] move some important parts to config
+- [x] move some important parts to config
 - [ ] cerate all requried pages even if thye are empty
 - [x] highlight the article we are reading on the menu
 - [ ] create a Donation page + donation link on menu

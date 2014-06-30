@@ -3,6 +3,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%- @site.title %></title>
   <%- @getBlock("styles").add(["//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css", "/style/bootstrap-rtl.css","http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css","/style/style.css"]).toHTML() %>
   
     <%- @getBlock("meta").toHTML() %>
@@ -21,7 +22,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">کتاب لینوکس و زندگی</a>
+          <a class="navbar-brand" href="#"><%- @site.title %></a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
