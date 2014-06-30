@@ -3,15 +3,13 @@
 
 # todo
 
-- [x] move all IMG from internet to local repo. grep http:// in documents
+- [ ] move some important parts to config
 - [ ] cerate all requried pages even if thye are empty
 - [ ] highlight the article we are reading on the menu
-- [x] move template parts to seperated layout files
-- [x] make a footer
-- [x] import articles from external links
-- [x] Droid font
-- [x] order of the table of contents
-- [x] show chapter title in rows and only once
+- [ ] create a Donation page + donation link on menu
+- [ ] Export to epub
+- [ ] Export to PDF
+
 
 
 # usage

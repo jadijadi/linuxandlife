@@ -9,7 +9,7 @@
 </head>
 
 <body role="document">
-  <%- @getBlock("scripts").toHTML() %>
+  <%- @getBlock("scripts").add(["/vendor/jquery.js", "/scripts/script.js"]).toHTML() %>
   <!-- show the chapters -->
 
     <div  class="navbar navbar-inverse navbar-fixed-top" role="navigation">
