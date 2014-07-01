@@ -13,7 +13,7 @@
 		   <% if (@document.url == article.url) : %>
 		     <h4 class="list-group-item-heading"><%= article.title %></h4>
 		   <% else :%>
-		     <%= article.title %>
+		     <%- article.order %><%= article.title %>
 		   <% end %>
 		</a>
       <% end %>
