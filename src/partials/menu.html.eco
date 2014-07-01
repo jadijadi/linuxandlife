@@ -2,7 +2,7 @@
       <a href="#" class="list-group-item active"><strong>فهرست</strong></a>
       <a href="/about.html" class="list-group-item">درباره کتاب لینوکس و زندگی</a>
 
-      <% for article in @getCollection("html").findAllLive({relativeOutDirPath: "articles"},[{order:1}]).toJSON(): %>
+      <% for article in @getCollection("html").findAllLive({relativeOutDirPath: "chapters"},[{order:1}]).toJSON(): %>
         <% if article.chapter != @previous_chapter : %>
         	
 
@@ -13,7 +13,7 @@
 		   <% if (@document.url == article.url) : %>
 		     <h4 class="list-group-item-heading"><%= article.title %></h4>
 		   <% else :%>
-		     <%- article.order %><%= article.title %>
+		     <% article.order %><%= article.title %>
 		   <% end %>
 		</a>
       <% end %>
