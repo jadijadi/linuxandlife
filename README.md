@@ -10,7 +10,8 @@
 - [ ] Export to epub
 - [ ] Export to PDF
 - [x] first page
-- [ ] accept Zain Pal
+- [x] accept Zain Pal
+- [ ] redesign tnx_for_support & support page 
 
 
 
