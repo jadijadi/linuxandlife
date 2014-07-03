@@ -10,12 +10,27 @@ order: 1
 
 این پروژه، یک تفریح شخصاین پروژه، یک تفریح شخصی برای [من](http://jadi.net) است. پروژه‌ای شامل ترجمه و نوشتن کتاب‌هایی که مخاطب اصلی‌شون جامعه **گیک ایران**‌ است. این پروژه بدون هیچ کمکی هم آروم آروم در دنیا پیش خواهد رفت ولی بدون شک کمک شما باعث می شه دلگرمی من بهش بیشتر بشه و پروژه‌های جدیدی رو شروع کنم... واقعیت اینه که چندین و چند کتاب هست که من فکر می کنم هر گیک باید ازشون لذت برده باشه ولی هنوز نه ترجمه شدن ، نه نوشته (: 
 
+# کارت به کارت
 اگر علاقمند به کمک مالی هستین (به قول قدیمی ها از یه تومن تا صد تومن) رو به این حساب بانکی به فامیلی *میرمیرانی* واریز کنین و اسم واقعی <abbr title="امیرعماد میرمیرانی">من</abbr> رو ببینین:
 
 
-#6219-8610-0423-7664 
+###6219-8610-0423-7664 
 *(اگر کپی پیست می کنین 6219861004237664 )*
 
+#زرین پال
+<script type="text/javascript" src="http://www.zarinpal.com/webservice/TrustCode"></script><noscript><a href="https://www.zarinpal.com/users/receptive_websites">ZarinPal Receptive Websites</a></noscript>
+من در زرین پال حساب باز کردم! ظاهرا روشی خوب است برای گرفتن کمک مالی. از فرم زیر می تونین به مقداری که می خواین با پیامی که می خواین از این پروژه کمک مالی بکنین:
+
+<form action="https://www.zarinpal.com/webservice/Simplepay" method="post" onsubmit="msg('onSubmit')" id="TransactionAddForm" target="_blank">
+<br><right>مبلغ*: </right><input type="hidden" id="TransactionAccountID" value="zp.109399.1" name="data[Transaction][account_id]">
+<input type="text" id="TransactionAmount" value="به  تومان وارد كنيد."  onblur="if(this.value=='') this.value='به  تومان وارد كنيد.';" onfocus="if(this.value=='به  تومان وارد كنيد.') this.value='';"   name="data[Transaction][amount]" maxlength="9" size="31">
+<right>توضیحات: </right><input type="text" id="TransactionDesc" value="در صورت لزوم"  onblur="if(this.value=='') this.value='در صورت لزوم';" onfocus="if(this.value=='در صورت لزوم') this.value='';"   name="data[Transaction][desc]" maxlength="50" size="31">
+<input type="hidden" id="TransactionRedirectUrl" value="http://linuxbook.ir/tnx_for_support.html" name="data[Transaction][redirect_url]">
+<br>
+<center><left><input name="submit" type="submit"   value="پـرداخـت "></left></center>
+</form>
+
+#PayPal
 همچنین اگر از پی‌پل استفاده می کنین من یک حساب خالی اونجا دارم که هرچند قابلیت استفاده خاصی نداره، ولی کسی چه می دونه.. اگر تنها راه شما است شاید روزی به در من هم خورد: jadijadi@gmail.com
 
 <p></p>
