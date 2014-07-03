@@ -1,0 +1,12 @@
+
+
+ZarinPal
+===
+
+<form action="https://www.zarinpal.com/webservice/Simplepay" method="post" id="TransactionAddForm">
+	<input type="hidden" id="TransactionAccountID" value="zp.109399.1" name="data[Transaction][account_id]">
+	<input type="hidden" id="TransactionAmount" value="10000" name="data[Transaction][amount]">
+	<input type="hidden" id="TransactionDesc" value="توضيح تراکنش واريزی" name="data[Transaction][desc]">
+	<input type="hidden" id="TransactionRedirectUrl" value="http://www.linuxbook.ir/tnx_for_support.html" name="data[Transaction][redirect_url]">
+	<div class="submit"><input type="image" src="http://www.zarinpal.com/img/merchant/merchant-6.png"></div>
+</form>

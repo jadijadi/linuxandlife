@@ -11,7 +11,8 @@
 - [ ] Export to PDF
 - [x] first page
 - [x] accept Zain Pal
-- [ ] redesign tnx_for_support & support page 
+- [ ] redesign tnx_for_support page
+- [x] redesign support page
 
 
 
@@ -35,3 +36,4 @@ Personal life: 51-60
 
 
 wkhtml2pdf converts pdf.html to pdf
+
