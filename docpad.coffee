@@ -2,7 +2,7 @@
 docpadConfig = {
 	templateData:
 		site:
-			title: "کتاب لینوکس و زندگی، راهنمای گیک‌های جوان"
+			title: "لینوکس و زندگی"
 }
 
 # Export the Configuration

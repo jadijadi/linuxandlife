@@ -11,7 +11,7 @@
 </head>
 
 <body role="document">
-  <%- @getBlock("scripts").add(["/vendor/jquery.js", "/scripts/script.js", "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"]).toHTML() %>
+  <%- @getBlock("scripts").add(["/vendor/jquery-1.11.1.min.js", "/scripts/script.js", "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"]).toHTML() %>
   <!-- show the chapters -->
 
     <div  class="navbar navbar-inverse navbar-fixed-top" role="navigation">

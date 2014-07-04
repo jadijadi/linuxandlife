@@ -12,7 +12,10 @@
 - [x] first page
 - [x] accept Zain Pal
 - [ ] redesign tnx_for_support page
+- [ ] move support info (like bank acount, paypal email and zarincard) to config and show only if exists
 - [x] redesign support page
+- [ ] show to support page at the bottom of the menu
+
 
 
 
