@@ -46,7 +46,7 @@ order: 1
 <div class="form-group" >
     <div class="col-sm-offset-4 col-sm-8">
 	<input type="hidden" id="TransactionRedirectUrl" value="http://linuxbook.ir/tnx_for_support.html" name="data[Transaction][redirect_url]">
-	<input name="submit" type="submit"  class="btn btn-lg btn-default" value="رفتن به زرین پال برای ارسال حمایت مالی">
+	<input name="submit" type="submit"  class="btn btn-lg btn-default" value="رفتن به زرین پال برای پرداخت">
     </div>
 </div>
 </form>
