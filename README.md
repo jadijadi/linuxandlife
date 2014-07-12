@@ -5,10 +5,9 @@
 - [ ] Export to epub
 - [ ] Export to PDF
 - [ ] redesign tnx_for_support page
+- [ ] show previous and next section links at the end of each article
 - [ ] move support info (like bank acount, paypal email and zarincard) to config and show only if exists
-- [ ] show to support page at the bottom of the menu
-- [x] add the hackr manifesto to the book
-- [x] an article for windows to linux migration
+- [x] show to support page at the bottom of the menu
 
 
 
