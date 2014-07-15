@@ -29,7 +29,7 @@
           <ul class="nav navbar-nav">
             <li><a href="/">روی جلد</a></li>
             <li><a href="/support.html">حمایت</a></li>
-            <li><a href="/about.html">درباره</a></li>
+            <li><a href="/chapters/about.html">درباره</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

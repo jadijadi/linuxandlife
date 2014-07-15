@@ -9,7 +9,6 @@
     <div class="row"><div class="col-md-12"><br><br></div></div>
      
     <div class="col-md-8">
-<h1 class="articletitle"><%- @document.title %></h1>		
 
       <% for article in @getCollection("html").findAllLive({relativeOutDirPath: "chapters"},[{order:1}]).toJSON(): %>
         <% if article.order < @document.order : %> 
@@ -31,6 +30,10 @@
       <br>
       <% if @next_title : %>فصل بعدی: <a href="<%= @next_url %>"><%= @next_title %></a><% end %>
       
+      <br />
+
+<h1 class="articletitle"><%- @document.title %></h1>		
+     
       
 <%- @content %>
 

@@ -1,6 +1,4 @@
 
-      <a href="#" class="list-group-item active"><strong>فهرست</strong></a>
-      <a href="/about.html" class="list-group-item">درباره کتاب لینوکس و زندگی</a>
 
       <% for article in @getCollection("html").findAllLive({relativeOutDirPath: "chapters"},[{order:1}]).toJSON(): %>
         <% if article.chapter != @previous_chapter : %>
@@ -9,7 +7,7 @@
 			<a class="list-group-item active" ><%= article.chapter %></a>
           <% @previous_chapter = article.chapter %>
         <% end %>
-		<a class="list-group-item" href=<%- article.url %>><%- article.order %> 
+		<a class="list-group-item" href=<%- article.url %>><% article.order %> 
 		   <% if (@document.url == article.url) : %>
 		     <h4 class="list-group-item-heading"><%= article.title %></h4>
 		   <% else :%>

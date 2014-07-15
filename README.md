@@ -5,9 +5,9 @@
 - [ ] Export to epub
 - [ ] Export to PDF
 - [ ] redesign tnx_for_support page
-- [ ] show previous and next section links at the end of each article
 - [ ] move support info (like bank acount, paypal email and zarincard) to config and show only if exists
-- [ ] remove about page and move it to the normal book structure in chapter About
+- [x] remove about page and move it to the normal book structure in chapter About
+- [ ] beutify the NEXT and PREVIOUS chapter
 
 
 
