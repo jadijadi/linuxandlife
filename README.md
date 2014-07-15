@@ -7,7 +7,7 @@
 - [ ] redesign tnx_for_support page
 - [ ] show previous and next section links at the end of each article
 - [ ] move support info (like bank acount, paypal email and zarincard) to config and show only if exists
-- [x] show to support page at the bottom of the menu
+- [ ] remove about page and move it to the normal book structure in chapter About
 
 
 

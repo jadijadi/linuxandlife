@@ -10,8 +10,39 @@
      
     <div class="col-md-8">
 <h1 class="articletitle"><%- @document.title %></h1>		
+
+      <% for article in @getCollection("html").findAllLive({relativeOutDirPath: "chapters"},[{order:1}]).toJSON(): %>
+        <% if article.order < @document.order : %> 
+          <% @previous_title = article.title %>
+          <% @previous_url = article.url %>
+        <% end %>
+       
+        <% if article.order > @document.order && !@passed : %> 
+          <% @next_title = article.title %>
+          <% @next_url = article.url %>
+          <% @passed = 1 %> 
+        <% end %>
+        
+      <% end %>
+
+
+
+      <% if @previous_title : %>فصل قبلی: <a href="<%= @previous_url %>"><%= @previous_title %></a><% end %>      
+      <br>
+      <% if @next_title : %>فصل بعدی: <a href="<%= @next_url %>"><%= @next_title %></a><% end %>
+      
+      
 <%- @content %>
+
+      <% if @previous_title : %>فصل قبلی: <a href="<%= @previous_url %>"><%= @previous_title %></a><% end %>      
+      <br>
+      <% if @next_title : %>فصل بعدی: <a href="<%= @next_url %>"><%= @next_title %></a><% end %>
+      
+      
+
     </div > <!-- content -->
+    
+    
     
     
     <div class="col-md-3" > <!-- left menu -->
