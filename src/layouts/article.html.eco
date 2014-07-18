@@ -25,22 +25,43 @@
       <% end %>
 
 
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-4 prevchapter" ><% if @previous_title : %>&rarr;<a href="<%= @previous_url %>" class="btn btn-default">
+		<%= @previous_title %></a><% end %>      
+  </div>
+  <div class="col-md-2"> </div>
+  <div class="col-md-4 nextchapter"><% if @next_title : %><a href="<%= @next_url %>" class="btn btn-default">
+		<%= @next_title %></a>&larr;<% end %>
+  </div>
+  <div class="col-md-1"></div>
+</div>
 
-      <% if @previous_title : %>فصل قبلی: <a href="<%= @previous_url %>"><%= @previous_title %></a><% end %>      
-      <br>
-      <% if @next_title : %>فصل بعدی: <a href="<%= @next_url %>"><%= @next_title %></a><% end %>
+<hr />
       
-      <br />
 
 <h1 class="articletitle"><%- @document.title %></h1>		
      
       
 <%- @content %>
 
-      <% if @previous_title : %>فصل قبلی: <a href="<%= @previous_url %>"><%= @previous_title %></a><% end %>      
-      <br>
-      <% if @next_title : %>فصل بعدی: <a href="<%= @next_url %>"><%= @next_title %></a><% end %>
+
+
+<hr />
       
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-4 prevchapter" ><% if @previous_title : %>&rarr;<a href="<%= @previous_url %>" class="btn btn-default">
+		<%= @previous_title %></a><% end %>      
+  </div>
+  <div class="col-md-2"> </div>
+  <div class="col-md-4 nextchapter"><% if @next_title : %><a href="<%= @next_url %>" class="btn btn-default">
+		<%= @next_title %></a>&larr;<% end %>
+  </div>
+  <div class="col-md-1"></div>
+</div>
+
+<br />
       
 
     </div > <!-- content -->

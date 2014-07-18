@@ -41,3 +41,11 @@ p {
 .support {
 	text-align: center;
 }
+
+.nextchapter {
+   text-align: left;
+}
+
+.prevchapter {
+	text-align: right;
+}

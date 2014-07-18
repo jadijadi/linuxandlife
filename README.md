@@ -6,7 +6,6 @@
 - [ ] Export to PDF
 - [ ] redesign tnx_for_support page
 - [ ] move support info (like bank acount, paypal email and zarincard) to config and show only if exists
-- [x] remove about page and move it to the normal book structure in chapter About
 - [ ] beutify the NEXT and PREVIOUS chapter
 
 
