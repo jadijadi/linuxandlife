@@ -1,21 +1,31 @@
-[کتابی برای کشف دنیای پشت لینوکس و درک بهتر از زندگی](http://linuxbook.ir)
+[کتابی برای کشف دنیای پشت لینوکس و درک بهتر از زندگی](http://www.linuxbook.ir)
 
 
-# todo
-- [ ] Export to epub
+# To-Do:
+- [ ] Export to ePub
 - [ ] Export to PDF
-- [ ] redesign tnx_for_support page
-- [ ] move support info (like bank acount, paypal email and zarincard) to config and show only if exists
-- [x] beutify the NEXT and PREVIOUS chapter
+- [ ] Redesign _thx for support_ page
+- [ ] Move support info (like: bank account, PayPal email and Zarrin Card) to config and show them if something exists.
+- [x] Beautify the NEXT and PREVIOUS chapter
 
 
 
-# usage
-earch article should have these fields in  docutments/articles :
-
-  ---
-  order: show the orderd of this article in whole book
-  chapter: show the name of the chapter this article is part of
-  title: title of this article
-  layout: article
-  ---
+# Usage:
+Each article should have this header:
+```
+---
+layout: article
+chapter: "the name of current chapter"
+order: "article number in book index"
+title: "the name of article"
+---
+```
+Here's an example:
+```
+---
+layout: article
+chapter: اصول و مقدمات
+order: 1
+title: فلسفه آزادی نرم‌افزار
+---
+```
