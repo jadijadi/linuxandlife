@@ -23,4 +23,4 @@ Personal life: 51-60
 
 
 wkhtml2pdf converts pdf.html to pdf
-
+docpad deploy-ghpages --env static
