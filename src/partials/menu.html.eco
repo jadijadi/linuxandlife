@@ -16,7 +16,7 @@
 		</a>
       <% end %>
       <p></p>
-      <div class="alert alert-success support" role="alert">
+      <div class="alert alert-success support" role="alert">اگر به نظرتان مفید بود<br />
       <a href=/support.html>از این پروژه حمایت کنید</a>
       </div>
 
