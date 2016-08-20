@@ -2,8 +2,6 @@
 
       <% for article in @getCollection("html").findAllLive({relativeOutDirPath: "chapters"},[{order:1}]).toJSON(): %>
         <% if article.chapter != @previous_chapter : %>
-        	
-
 			<a class="list-group-item active" ><%= article.chapter %></a>
           <% @previous_chapter = article.chapter %>
         <% end %>
@@ -16,7 +14,7 @@
 		</a>
       <% end %>
       <p></p>
-      <div class="alert alert-success support" role="alert">اگر به نظرتان مفید بود<br />
+      <div class="alert alert-success support" role="alert">
       <a href=/support.html>از این پروژه حمایت کنید</a>
       </div>
 

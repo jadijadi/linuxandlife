@@ -7,10 +7,7 @@ title: لینوکس ویندوز نیست
 
 این چند وقت بحث زیادی در مورد لینوکس و ویندوز در گرفته. من اصولا این بحث را زیاد مربوط نمی‌دانم چون کامپیوتر و به تبع آن سیستم عامل یک <strong>ابزار</strong> است و تا وقتی ما <strong>هدف</strong> از استفاده را نشناسیم، انتخاب <strong>ابزار</strong> بی‌معنی است. من از لینوکس استفاده می‌کنم و <a href='http://www.google.com/search?client=safari&amp;rls=en-us&amp;q=site:jadi.net+لینوکس&amp;ie=UTF-8&amp;oe=UTF-8'  >برای اینکار دلایل زیادی دارم</a>. در عین حال به نظرم در آینده مردم بیشتر و بیشتر از گنو/لینوکس استفاده خواهند کرد اما در عین حال معتقدم بدترین کاری که برای لینوکس می‌شود کرد این است که جوی بوجود بیاوریم که افراد بدون درک از اینکه هدفشان چیست،‌ به این امید که همه مشکلاتشان حل شود آن را نصب کنند. به هرحال... به عنوان مشارکت در این بحث‌ها،‌ این مقاله مشهور (<a href='http://linux.oneandoneis2.org/LNW.htm'  >Linux is NOT Windows</a>) را اینجا ترجمه می کنم.
 
-<h1 class=articletitle>
-<img style="width: 55px; height: 64px;" alt="Linux" src="/images/tux.png" align="middle">
-=! <img style="width: 73px; height: 65px;" alt="Windows" src="/images/windows.png" align="middle">
-</h1>
+<img style="width: 55px; height: 64px;" alt="Linux" src="/images/tux.png" align="middle">=! <img style="width: 73px; height: 65px;" alt="Windows" src="/images/windows.png" align="middle">
 
 ## مشکل ۱: لینوکس دقیقا ویندوز نیست
 

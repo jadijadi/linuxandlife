@@ -1,0 +1,37 @@
+<html dir=rtl>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <%- @getBlock("styles").add(["./style/style.css"]).toHTML() %>
+</head >
+<body >
+
+<H1>فقط برای تفریح</h1>
+<h3>داستان یک انقلابی اتفاقی</h3>
+
+<hr><b>فقط برای تفریح</b>
+<br />
+<br />نوشته <b>لینوس توروالدز</b> خالق لینوکس  و <b>دیوید دیاموند</b>
+<br>
+<br />ترجمه <b>جادی</b><br >www.Jadi.net
+<br />
+<br />برای دسترسی به آخرین نسخه کتاب در فرمت‌های مختلف و همچنین حمایت مالی از پروژه کتاب‌هایی برای گیک‌ها، به سایت www.LinuxStory.ir و بخش <b>حمایت</b> مراجعه کنید.
+<hr>
+
+
+<h1 class="articletitle"><%- @document.title %></h1>		
+      
+<%- @content %>
+
+<p></p>
+
+<h1>پایان</h1>
+امیدوارم از این کتاب لذت برده باشید. برای کمک به ادامه راه ترجمه این تیپ کتاب‌ها، به سایت linuxstory.ir مراجعه و از منوی بالا <b>حمایت</b> رو کلیک کنید. 
+<br >
+با تشکر
+<br >جادی
+<br >www.Jadi.net
+
+
+</body >
+</html >

@@ -1,0 +1,29 @@
+<%- @partial('head') %> 
+
+<div class="row"><div class="row-md-12 top-space-reserver" ></div><div>
+<div class="row">
+<div class="row"><div class="col-md-12"><br><br></div></div>
+<div class="col-md-12">
+<!-- body -->
+
+<h1 class="articletitle">
+
+<%- @document.title %>
+
+</h1>		
+      
+<%- @content %>
+
+<p></p>
+<div class="alert alert-success support" role="alert">
+<a href=/support.html>از این پروژه حمایت کنید</a>
+</div>
+<!-- end of body -->
+</div > <!-- content -->
+</div> <!-- content row -->
+</div> <!-- row full page -->
+</div>
+</div>
+
+<%- @partial('footer') %>
+
