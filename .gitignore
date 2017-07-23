@@ -2,3 +2,4 @@
 node_modules/
 out/
 *kate-swp
+.DS_Store

@@ -11,7 +11,7 @@
     "docpad-plugin-eco": "~2.1.0",
     "docpad-plugin-ghpages": "~2.4.4",
     "docpad-plugin-markdown": "~2.0.3",
-    "docpad-plugin-marked": "~2.3.0",
+    "docpad-plugin-marked": "^2.3.0",
     "docpad-plugin-partials": "~2.9.2"
   },
   "main": "node_modules/docpad/bin/docpad-server",
