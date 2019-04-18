@@ -6,39 +6,39 @@
 توجه کنید که این جریان هیچ ربطی به مفهوم ساب دامین ندارد. ساب دامین هم درست مثل دامین عمل می کند: یک اسم است که توسط یک سرویس به نام \lr{DNS} که وظیفه تبدیل آدرس های انسان-فهم اینترنتی به عددهای آی پی کامپیوتر-فهم را بر عهده گرفته. من شخصا از سرویس های دی ان اس رایگان روی اینترنت از جمله
 \href{http://freedns.afraid.org}{\lr{freedns.afraid.org}}
   برای کارهای عمومی ام استفاده می کنم. پس اولین قدم برای من رفتن به آنجا، رجیستر کردن دی ان اس مورد نظر و ارسال آن به آی پی سرویس دهنده وب است.
-
-\includegraphics[scale=1,width=\textwidth,keepaspectration=true]{../files/images/freednsafraidorg.png}
-
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{../files/images/freednsafraidorg.png}
+\end{figure}
 حالا هر کس بزند \lr{jadi3.undo.it} از آنجا به وب سرور من هدایت خواهد شد. قدم بعدی این است که به وب سرورم بگویم هر کس به این آدرس آمد کدام دایرکتوری به عنوان محتویات آن آدرس وب به او نمایش داده شود. من قبلا در تنظیمات آپاچی (که مثل همه تنظیمات دیگر در
 \lr{/etc}
  قرار دارد) داشتم:
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 ServerAdmin jadijadi@gmail.com
 DocumentRoot /home/jadi/public_html/
-ServerName www.freekeyboard.net
+ServerName www.freekeyboard.net 
 ErrorLog /home/jadi/www-error_log
 CustomLog /home/jadi/www-access_log combined
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 و حالا فقط کافی است این را هم اضافه کنم که:
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 ServerAdmin jadijadi@gmail.com
 DocumentRoot /home/jadi/public_html/
 ServerName jadi3.undo.it
 ErrorLog /home/jadi/www-error_log
 CustomLog /home/jadi/www-access_log.jadi common
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 تا به وب سرور گفته باشم که اگر کسی اومد و با آدرس \lr{jadi3.undo.it} کار داشت بهش محتویات فلان دایرکتوری رو نشون بده. می بنین که من اینجا همون دایرکتوری قبلی رو معرفی کردم و در نتیجه هر کس آدرس
 \href{http://jadi3.undo.it}{\lr{http://jadi3.undo.it}}
 رو بزنه به همون جایی می رسه که بقیه دامین های من می رسن. مشخصه که هر تغییری در فایل تنظیمات نیازمند ری استارت سرویس است. سرویس آپاچی رو ری استارت می کنم:
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
-# /etc/init.d/apache2 restart
+\begin{frameng}
+\begin{lstlisting}
+/etc/init.d/apache2 restart
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 نکات مهم در مورد این مقاله
 - دامین \lr{undo.it} متعلق به من نیست. یک دامین آزاد است برای هر کسی که دوست دارد روی آن ساب دامین تعریف کند
 - تلفظ صحیح دامین ظاهرا دومین است

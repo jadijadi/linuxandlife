@@ -5,25 +5,24 @@
 این روزها در گنوم و در کی.دی.ای امکان تنظیم مرکزی پروکسی فراهم است و بعضی برنامه‌ها هم خودشان این امکان را به شکل مستقل دارند. اما اگر مثل یک نینجای گنو/لینوکسی در خط فرمان باشید چه؟ در خط فرمان 
 \lr{Bash}
 ، این متغیرها می‌توانند وظیفه تنظیم پروکسی برای پروتکل‌های مختلف را بر عهده بگیرند:
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 HTTP_PROXY
 HTTPS_PROXY
 FTP_PROXY
 GOPHER_PROXY
 WAIS_PROXY
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 مثلا اگر من بخواهم با برنامه \lr{apt-get} با استفاده از یک پروکسی چیزی نصب کنم باید بزنم:
-\begin{latin}
-\settextfont{Consolas}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 $ sudo su -
 # export HTTP_PROXY=http://proxy:port
 # export HTTPS_PROXY=http://proxy:port
 # apt-get install zim
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 اول کاربر را به کاربر ریشه تغییر می دهم، بعد متغیرهای مربوط به پروکسی را مقداردهی و اکسپورت می کنم (اگر متوجه نشده‌اید که به جای پروکسی و پورت باید مقدار مورد استفاده خودتان را بگذارید شاید این راهنما برای شما نوشته نشده باشد) و بعد برنامه را مطابق معمول نصب می‌کند - اما حالا برنامه
 \lr{apt-get}
  در هنگام استفاده از پروتکل های

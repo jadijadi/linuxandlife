@@ -5,22 +5,21 @@
 \subsection*{کار با فایل‌ها و دایرکتوری‌ها}
 \subsubsection*{\lr{ls} برای دیدن فهرست دایرکتوری‌ها و فایل‌ها}
 در هر جایی که باشید، با زدن دستور \lr{ls} می توانید ببینید چه فایل‌ها و دایرکتوری‌هایی در آنجا وجود دارد. برای مثال:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
-jadi@wonderland:~$ ls
-1.txt  digits  donot.read.me  empty  mystery  project
+\begin{frameng}
+\begin{lstlisting}
+jadi@wonderland:\~{}\$ ls
+1.txt	digits	donot.read.me	empty	mystery
+project
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
 همانطور که می‌بینید خواندن این خروجی کمی سخت است و اطلاعات چندانی هم منتقل نمی‌کند. پس بهتر است از سوییچ‌ها استفاده کنیم. سوییچ‌های دستورات لینوکس معمولا بعد از
 \lr{-}
 یا
 \lr{-{}-}
  نوشته می‌شوند. مثلا برای دیدن خروجی طولانی‌ (\lr{long}) باید از سوییچ \lr{l} استفاده کنم:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ ls -l
 total 20
 -rw-rw-r-- 1 jadi jadi   64 Jul  6 15:50 1.txt
@@ -30,9 +29,9 @@ total 20
 drwxrwxr-x 2 jadi jadi 4096 Jul  6 15:51 mystery
 drwxrwxr-x 2 jadi jadi 4096 Jul  6 15:51 project
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
-\حالا اطلاعات بیشتری در مورد هر فایل و دایرکتوری پیدا می‌کنیم. مثلا حجم هر فایل، تاریخ ساخته شدن آن و مالک و دسترسی‌ها (در این مورد بعدا بیشتر توضیح خواهیم داد). همچنین حرف \lr{d} در اول خط نمایشگر این است که این خط مربوط به یک دایرکتوری است. ترکیب سوییچی بسیار مرسوم در گرفتن دایرکتوری 
+حالا اطلاعات بیشتری در مورد هر فایل و دایرکتوری پیدا می‌کنیم. مثلا حجم هر فایل، تاریخ ساخته شدن آن و مالک و دسترسی‌ها (در این مورد بعدا بیشتر توضیح خواهیم داد). همچنین حرف \lr{d} در اول خط نمایشگر این است که این خط مربوط به یک دایرکتوری است. ترکیب سوییچی بسیار مرسوم در گرفتن دایرکتوری 
 \lr{ltrh}
  است؛ \lr{l} برای نمایش طولانی، \lr{h} برای نمایش آدم‌وار (اول کلمه 
 \lr{human}
@@ -41,9 +40,9 @@ drwxrwxr-x 2 jadi jadi 4096 Jul  6 15:51 project
  با عبارت آدم‌وار \lr{4k} روبرو شویم) و \lr{tr} برای تنظیم بر اساس «معکوس زمان» یا همان 
 \lr{time reversed}
  که جدیدترین فایل‌ها را پایین نمایش می‌دهد. چرا این فایل مهم است؟ چون می‌تواند به شکلی آدم‌وار به شما بگوید که آخرین فایل‌هایی که در یک دایرکتوری تغییر کرده‌اند چه بوده‌اند. مثلا در بسیاری مواقع از این برای کشف اینکه آیا لاگی تغییر کرده یا نه از چنین دستوری استفاده می‌کنیم:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=10cm]
+\begin{frameng}
+\small
+\begin{lstlisting}
 jadi@wonderland:~$ ls -ltrh /var/log
 total 1.5M
 drwxr-xr-x 2 root      root 4.0K Apr 12 09:03 dist-upgrade
@@ -70,19 +69,18 @@ drwxr-xr-x 2 root      root 4.0K Jul  6 06:42 unattended-upgrades
 -rw-r----- 1 syslog    adm   16K Jul  6 15:49 auth.log
 -rw-r----- 1 syslog    adm  271K Jul  6 15:56 syslog
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
 \textbf{توجه.}
 سوییچ‌ها را در طول زمان حفظ خواهید شد! نگران نباشید.
 \subsubsection*{\lr{pwd} برای دیدن مسیر جاری}
 دستوری بسیار ساده که به شما می‌گوید در کجای جهان ایستاده‌اید:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:/tmp$ pwd
 /tmp
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
 اکثر توزیع‌ها از جمله اوبونتویی که در این درس استفاده شده، در خط فرمان مسیری که در آن هستید را به شما نشان می‌دهند اما دستور 
 \lr{pwd}
@@ -91,31 +89,34 @@ jadi@wonderland:/tmp$ pwd
  مانند یک جی.پی.اس. عالی در هر لحظه می‌تواند جای شما را به شما گزارش دهد. همانطور که قبلا هم گفته بودم تمام فایل‌های لینوکس در یک ساختار درختی از دایرکتوری‌ها چیده شده‌اند و شما در هر لحظه در یکی از این شاخه‌ها ایستاده‌اید. یادتان هست که شاخه‌ها از \lr{/} که به آن روت می گفتیم شروع می شوند و تا هر کجایی که شما دایرکتوری‌های تو در تو بسازید ادامه پیدا می‌کنند.
 \subsubsection*{\lr{cd} برای حرکت در دایرکتوری ها}
 در بخش ساختار فایل‌های لینوکس  یادگرفتیم که در لینوکس همه فایل‌ها در یک ساختار درختی از دایرکتوری‌ها قرار دارند که از دایرکتوری ریشه که آن را با \lr{/} نشان می‌دهیم شروع شده و به سمت پایین ادامه می‌یابد. برای حرکت در این دایرکتوری‌ها از دستور \lr{cd} که مخفف \lr{change directory} است استفاده می‌کنیم. در جلوی این دستور باید مسیر جایی که می‌خواهیم به آنجا برویم را مشخص کنیم:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ cd /
 jadi@wonderland:/$ 
 \end{lstlisting}
-\end{latin}
-
+\end{frameng}
 همانطور که می‌بینید کاربر در ابتدا در خانه خود بوده (که همیشه آن را با $\sim$ نمایش می‌دهیم) و با زدن \lr{/} در جلوی دستور سی دی، به دایرکتوری ریشه رفته است. در مرحله بعد این امکان را داریم که وارد یکی دیگر از دایرکتوری‌ها شویم:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\small
+\begin{lstlisting}
 jadi@wonderland:/$ cd log
 -bash: cd: log: No such file or directory
 jadi@wonderland:/$ cd var
 jadi@wonderland:/var$ cd log
 jadi@wonderland:/var/log$ ls
-alternatives.log  aptitude  boot.log       btmp          dmesg    dmesg.1.gz  faillog  installer  landscape  syslog  unattended-upgrades  wtmp
-apt               auth.log  bootstrap.log  dist-upgrade  dmesg.0  dpkg.log    fsck     kern.log   lastlog    udev    upstart
+alternatives.log	aptitude	boot.log
+btmp			dmesg		dmesg.1.gz
+faillog	installer	landscape	syslog
+unattended-upgrades	wtmp		apt
+auth.log		bootstrap.log	dist-upgrade
+dmesg.0	dpkg.log	fsck		kern.log
+lastlog	udev		upstart
 jadi@wonderland:/var/log$ cd apt
 jadi@wonderland:/var/log/apt$ ls
 history.log  term.log
 jadi@wonderland:/var/log/apt$ 
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
 همانطور که می بینید اول تلاش شده به دایرکتوری 
 \lr{log}
@@ -126,17 +127,18 @@ jadi@wonderland:/var/log/apt$
  رفته‌ایم و بعد با گرفتن \lr{ls}، وارد دایرکتوری 
 \lr{apt}
  شده‌ایم و از آنجا \lr{ls} گرفته‌ایم. این امکان از ابتدا موجود بود که با دستور
-\lr{\bidihl{cd log/var/apt}}
+\lr{cd log/var/apt}
 وارد همان دایرکتوری شویم.
 
 \textbf{تفاوت مسیرهای محلی و مسیرهای کامل:}
+
 در صورتی که در ابتدای هر مسیری \lr{/} بگذاریم، داریم به دستور مورد نظر می‌گوییم که مسیر فایل را از دایرکتوری ریشه مشخص کرده‌ایم. مثلا در هرجایی از سیستم که باشیم می‌توانیم با موفقیت دستور
-\lr{\bidihl{cd /var/log/apt}}
+\lr{cd /var/log/apt}
 را اجرا کنیم. 
 اما اگر ابتدای مسیردهی خود را با 
 \lr{/}
 آغاز نکنیم، مشغول دادن مسیرهای محلی هستیم یعنی با دستور
-\lr{\bidihl{cd var/log/apt}}
+\lr{cd var/log/apt}
 به سیستم فرمان داده‌ایم که
 \emph{در همین جایی که هستم دنبال دایرکتوری 
 \lr{var}
@@ -152,81 +154,77 @@ jadi@wonderland:/var/log/apt$
 درک شاخه‌بندی و جایی که ایستاده‌اید و مسیرهای محلی و مطلق در ابتدا کمی پیچیده است ولی در زندگی روزمره به سرعت آن را یاد خواهید گرفت. این نکته را هم در یاد داشته باشید که هر دایرکتوری حاوی دو
 \emph{فایل مجازی خاص هم هست: نقطه و دو نقطه. فایل نقطه به معنای همین دایرکتوری بوده و فایل دو نقطه}
 به معنی یک دایرکتوری بالاتر است. منطقی است که زدن سی دی دو نقطه، باعث یک پله بالارفتن در درخت دایرکتوری‌ها شود:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:/var/log/apt$ cd ..
 jadi@wonderland:/var/log$ 
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
 و
 \textbf{آخرین نکته}
 ‌! در لینوکس هرچقدر هم که نوشیده باشید، رسیدن به خانه ساده است. زدن یک \lr{cd} خالی، شما را از هر کجا به خانه‌تان خواهد رساند:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:/var/log$ cd
 jadi@wonderland:~$ pwd
 /home/jadi
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
-\و این دستور معادل
-\lr{\bidihl{cd $\sim$}}
+و این دستور معادل
+\lr{cd $\sim$}
 است چون $\sim$ برای هر کاربر به معنی
 \emph{دایرکتوری خانه من}
 است.
 \subsubsection*{\lr{cp} برای کپی کردن فایل‌ها}
 با دستور \lr{cp} که مخفف کپی است، می‌توانید کپی جدیدی از فایل‌های موجود در سیستم تهیه کنید. دستور کلی به این شکل است:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
 cp file1 file2
-\end{lstlisting}
-\end{latin}
+\end{frameng}
 
 که باعث کپی شدن فایل اول به اسم فایل دوم می‌شود (در نهایت دو نسخه از فایل خواهید داشت). دقت کنید که مانند تمام دستورات دیگر، فایل‌ها می‌توانند با نام مسیر همراه شوند:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ ls
-1.txt  digits  donot.read.me  empty  mystery  project
+1.txt	digits	donot.read.me	empty	mystery
+project
 jadi@wonderland:~$ cp 1.txt 2.txt
 jadi@wonderland:~$ ls
-1.txt  2.txt  digits  donot.read.me  empty  mystery  project
+1.txt	2.txt	digits	donot.read.me	empty
+mystery	project
 jadi@wonderland:~$ 
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
 می‌بینید که یک کپی از فایل \lr{1.txt} گرفته‌ایم. همینکار را می‌شد با دادن مسیر نیز انجام داد:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ ls
-1.txt  2.txt  digits  donot.read.me  empty  mystery  project
+1.txt	2.txt	digits	donot.read.me	empty
+mystery	project
 jadi@wonderland:~$ ls mystery/
 jadi@wonderland:~$ cp 1.txt mystery/
 jadi@wonderland:~$ ls mystery/
 1.txt
 \end{lstlisting}
-\end{latin}
-
+\end{frameng}
 توجه کنید که چطور با زدن مسیر مورد نظر در جلوی دستور لیست، لیست فایل‌های درون آن دایرکتوری را بررسی کرده‌ایم.
 \subsubsection*{\lr{rm} برای حذف فایل‌ها}
 دستور \lr{rm} که خلاصه 
 \lr{remove}
  است، فایل‌ها را حذف می‌کند، ساده و سر راست و خطرناک!
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ ls
-1.txt  2.txt  digits  donot.read.me  empty  mystery  project
+1.txt	2.txt	digits	donot.read.me	empty
+mystery	project
 jadi@wonderland:~$ rm 2.txt 
 jadi@wonderland:~$ ls
-1.txt  digits  donot.read.me  empty  mystery  projectt
+1.txt	digits	donot.read.me	empty	mystery
+project
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
 مشخص است که زدن دستوری مانند
 \lr{\bidihl{rm *}}
@@ -243,25 +241,25 @@ jadi@wonderland:~$ ls
  است، می‌تواند تقریبا مانند کپی، فایلی را از یک نام یا مسیر به نام یا مسیر دیگر
 \emph{انتقال}
 دهد. این دستور بر خلاف دستور کپی، فایل‌ اول را حذف و فایل دوم را ایجاد می‌کند.
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ ls
-1.txt  digits  donot.read.me  empty  mystery  project
+1.txt	digits	donot.read.me	empty	mystery
+project
 jadi@wonderland:~$ mv 1.txt 2.txt
 jadi@wonderland:~$ ls
-2.txt  digits  donot.read.me  empty  mystery  project
+2.txt	digits	donot.read.me	empty	mystery
+project
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
 \subsubsection*{\lr{touch} برای ایجاد یا آپدیت تاریخ یک فایل}
 این دستور در ساده‌ترین حالت یک نام فایل در جلوی خودش می‌گیرد و
 اگر فایلی به این اسم موجود نباشد، یک فایل خالی به آن نام می سازد
 اگر فایل از قبل موجود باشد، تاریخ آن را به تاریخ زمان حال آپدیت می‌کند
 با اینکه این فایل در این لحظه چندان مفید به نظر نمی رسد، از تعداد دفعاتی که در آینده آن را استفاده می‌کنید تعجب خواهید کرد.
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ ls -ltrh
 total 20K
 -rw-rw-r-- 1 jadi jadi   64 Jul  6 15:50 2.txt
@@ -272,7 +270,8 @@ drwxrwxr-x 2 jadi jadi 4.0K Jul  6 15:51 project
 drwxrwxr-x 2 jadi jadi 4.0K Jul  6 16:44 mystery
 jadi@wonderland:~$ touch newfile
 jadi@wonderland:~$ ls
-2.txt  digits  donot.read.me  empty  mystery  newfile  project
+2.txt	digits	donot.read.me	empty	mystery
+newfile	project
 jadi@wonderland:~$ touch 2.txt 
 jadi@wonderland:~$ ls -ltrh
 total 20K
@@ -285,34 +284,34 @@ drwxrwxr-x 2 jadi jadi 4.0K Jul  6 16:44 mystery
 -rw-rw-r-- 1 jadi jadi   64 Jul  6 16:52 2.txt
 jadi@wonderland:~$ 
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
 \subsubsection*{\lr{mkdir}}
 با این دستور می‌توانید یک دایرکتوری بسازید:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ ls
-1.txt  digits  donot.read.me  empty  mystery  project
+1.txt	digits	donot.read.me	empty	mystery
+project
 jadi@wonderland:~$ mkdir newdir
 jadi@wonderland:~$ ls
-1.txt  digits  donot.read.me  empty  mystery  newdir  project
+1.txt	digits	donot.read.me	empty	mystery
+newdir	project
 jadi@wonderland:~$ mkdir newdir/newer
 jadi@wonderland:~$ ls newdir/ -ltrh
 total 4.0K
 drwxrwxr-x 2 jadi jadi 4.0K Jul  6 16:54 newer
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
 \subsubsection*{\lr{rmdir}}
 این دستور یک دایرکتوری خالی را پاک می‌کند. مهم است که پیش از پاک کردن یک دایرکتوری
-فایل ‌های درون آن را پاک کرده باشید\footnote{یادتان هست؟ با دستور \lr{rm}}
-.
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+فایل ‌های درون آن را پاک کرده باشید\footnote{یادتان هست؟ با دستور \lr{rm}}.
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ ls 
-1.txt  digits  donot.read.me  empty  mystery  newdir  project
+1.txt	digits	donot.read.me	empty	mystery
+newdir	project
 jadi@wonderland:~$ touch newdir/newfile
 jadi@wonderland:~$ ls newdir/
 newer  newfile
@@ -325,15 +324,14 @@ jadi@wonderland:~$ rm newdir/newfile
 jadi@wonderland:~$ ls newdir/
 jadi@wonderland:~$ rmdir newdir/
 jadi@wonderland:~$ ls
-1.txt  digits  donot.read.me  empty  mystery  project
+1.txt	digits	donot.read.me	empty	mystery
+project
 \end{lstlisting}
-\end{latin}
-
+\end{frameng}
 \subsubsection*{\lr{cat} برای نمایش محتویات یک فایل متنی}
 دستور کت می‌توانید محتویات یک فایل متنی را نمایش دهد:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ ls 
 1.txt  digits  donot.read.me  empty  mystery  project
 jadi@wonderland:~$ cat digits 
@@ -353,7 +351,7 @@ This is a normal text file
 it has 3 lines
 this is the last line
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
 \subsubsection*{
 \lr{less}
@@ -395,21 +393,20 @@ this is the last line
  استفاده می کنند، به راحتی از 
 \lr{less}
  استفاده کنید و فراموش نکنید که
-\begin{flushleft}
-	\lr{less is more than more!}
-\end{flushleft}
+\begin{eng}
+less is more than more!
+\end{eng}
 
 \subsubsection*{\lr{wc} برای گرفتن آمار یک متن}
 دستور \lr{wc} اسمش را از توالت نگرفته! \lr{wc} مخفف 
 \lr{word count}
  یا شماره کلمات است. در صورت دادن یک فایل به عنوان آرگومان، این دستور به شما می‌گوید که این فایل حاوی چند کاراکتر، چند کلمه و چند خط است:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ wc ilovelist.txt 
 8  9 48 ilovelist.txt
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
 مشاهده می‌کنیم که فایل 
 \lr{ilovelist.txt}
@@ -418,9 +415,8 @@ jadi@wonderland:~$ wc ilovelist.txt
  بوده که از 
 \lr{line}
  گرفته شده و تنها می‌گوید فایل ورودی، چند خط دارد:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ cat digits.txt 
 1
 2
@@ -433,18 +429,14 @@ jadi@wonderland:~$ cat digits.txt
 9
 0
 jadi@wonderland:~$ wc -l digits.txt 
-10 digits.txtd:$\sim$\$ wc -l digits.txt
 10 digits.txt
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
-\subsubsection*{
-\lr{grep}
- برای جستجوی متن}
+\subsubsection*{\lr{grep} برای جستجوی متن}
 با این دستور بسیار پرکاربرد، می‌توانیم در یک یا چند فایل به دنبال خطوطی بگردیم که حاوی عبارت خاصی هستند. برای اول به محتویات این فایل نگاه کنید:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ cat sites 
 linux   linuxbook.ir
 jadi    jadi.net
@@ -454,32 +446,30 @@ mail    gmail.com
 github  github.com
 github  github.io
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
 حالا برای پیدا کردن تمام خطوطی که در آن کلمه 
 \lr{jadi}
  آمده می‌زنیم:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ grep jadi sites 
 jadi    jadi.net
 jadi    twitter.com/jadi
 jadi@wonderland:~$ 
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
 یا به دنبال تمام سایت‌هایی می گردیم که روی دامنه‌های دات کام هستند:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ grep com sites 
 jadi    twitter.com/jadi
 google  google.com
 mail    gmail.com
 github  github.com
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
 لازم به تکرار است که مانند هر دستور دیگر لینوکس، استفاده از
 \emph{ به جای نام فایل به معنای در تمام فایل‌های دایرکتوری جاری}
@@ -488,14 +478,13 @@ github  github.com
 ، به دنبال خطوطی گشت که 
 \lr{linux}
  در آن‌ها آمده:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ grep -r linux ~
 /home/jadi/ilovelist.txt:linux
 /home/jadi/sites:linux  linuxbook.ir
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
 \subsubsection*{
 \lr{sudo}
@@ -507,9 +496,8 @@ jadi@wonderland:~$ grep -r linux ~
  روشی است برای کارهایی که نیازمند دسترسی بالاتر هستند. برای مثال با دستور زیر می‌توانید برنامه 
 \lr{jcal}
  را نصب کنید:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=10cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ sudo apt-get install jcal
 [sudo] password for jadi: 
 ...
@@ -525,22 +513,20 @@ jcal libjalali0
 Need to get 32.4 kB of archives.
 After this operation, 129 kB of additional disk space will be used.
 Do you want to continue? [Y/n] 
-Get:1 http://us.archive.ubuntu.com/ubuntu/trusty
-/universe libjalali0 amd64 0.4.1-2 [13.2 kB]
+Get:1 http://us.archive.ubuntu.com/ubuntu/ trusty/universe libjalali0 amd64 0.4.1-2 [13.2 kB]
 ...
 Setting up jcal (0.4.1-2) ...
 Processing triggers for libc-bin (2.19-0ubuntu6) ...
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
 کاملا واضح است که در همه سیستم‌ها همه کاربرها به این دستور دسترسی ندارند و زدن 
 \lr{sudo}
  ممکن است است به آن‌ها اخطار بدهد که آن‌ها اجازه ارتقاء دسترسی خود به روت را ندارند و این عمل مجرمانه آن‌ها به مدیر سیستم گزارش خواهد شد. اگر چنین اتفاقی برای شما افتاد نگران نباشید چون هیچ ‌وقت هیچ کس به این گزارش‌ها توجهی نمی‌کند.
 \subsubsection*{\lr{passwd}}
 با پرسیدن پسورد فعلی، پسورد شما را تغییر می‌دهد.
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ passwd
 Changing password for jadi.
 (current) UNIX password: 
@@ -548,7 +534,7 @@ Enter new UNIX password:
 Retype new UNIX password: 
 passwd: password updated successfully
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
 توجه کنید که در حین وارد کردن کلمه عبور قدیم و بعد کلمه عبور جدید، هیچ چیزی روی صفحه نمایش داده نمی‌شود تا کسی که ممکن است از بالای شانه شما در حال نگاه کردن به مانیتور باشد، متوجه پسورد شما و حتی طول آن هم نشود.
 در بعضی سیستم‌ها ممکن است حداقلی اجباری برای طول یا پیچیدگی پسورد در نظر گرفته شده باشد و اگر پسوردی کوتاهتر وارد کنید، پذیرفته نشود. همیشه پیام‌های سیستم را با دقت بخوانید تا متوجه موفقیت آمیز بودن یا خطای احتمالی کارهای خود بشوید.
@@ -557,13 +543,12 @@ passwd: password updated successfully
 یکی از ساده‌ترین دستورات: صفحه را پاک می‌کند تا محیط کار شما خلوت و تمیز شود.
 \subsubsection*{\lr{date}}
 در ساده‌ترین شکل، تاریخ فعلی سیستم را نشان می‌دهد.
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ date
 Sun Jul  6 17:17:39 IRDT 2014
 \end{lstlisting}
-\end{latin}
+\end{frameng}
 
 \subsubsection*{\lr{locate}}
 این دستور جای یک فایل را به شما نشان می‌دهد. فرض کنید می دانید در سیستم فایلی به اسم 
@@ -571,15 +556,13 @@ Sun Jul  6 17:17:39 IRDT 2014
  وجود دارد ولی نمی‌دانیم کجاست، دستور 
 \lr{locate}
  می توانید مکان آن را نشان دهد:
-
-\begin{latin}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ locate do.md
 /home/jadi/w/fun/do.md
 /var/lib/dpkg/info/sudo.md5sums
 \end{lstlisting}
-\end{latin}
-
+\end{frameng}
 دقت کنید که یک فایل دیگر هم که حاوی این عبارت بوده پیدا شده.
 به خاطر پرهزینه بودن گشتن تمام فایل‌های سیستم، دستور 
 \lr{locate}
@@ -594,13 +577,11 @@ jadi@wonderland:~$ locate do.md
  دیده می‌شود. برای به روز رسانی بانک اطلاعاتی می‌توانید به شکل دستی و با دسترسی روت دستور 
 \lr{updatedb}
  را اجرا کنید (مثلا با
-\lr{\bidihl{sudo updatedb}}.
+\lr{sudo updatedb}).
 \subsubsection*{\lr{cal}}
 این برنامه می‌توانید یک تقویم زیبا را نشان دهد. در صورتی که بدون هیچ سوییچی از آن استفاده کنید، تقویم ماه جاری را نشان خواهد داد:
-
-\begin{latin}
-
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=12cm]
+\begin{frameng}
+\begin{lstlisting}
 jadi@wonderland:~$ cal
 July 2014        
 Su Mo Tu We Th Fr Sa  
@@ -608,39 +589,36 @@ Su Mo Tu We Th Fr Sa
 6  7  8  9  10 11 12  
 13 14 15 16 17 18 19  
 20 21 22 23 24 25 26  
-27 28 29 30 31    
+27 28 29 30 31     
 \end{lstlisting}
-
-\end{latin}
+\end{frameng}
 
 ولی برای برنامه ریزی می‌توانید با دادن سوییچ 3- از برنامه درخواست کرد که تقویم ماه‌های قبل و بعد را هم نشان بدهد:
-
-\begin{latin}
-\begin{footnotesize}
-\begin{lstlisting}[language=bash,basicstyle=\ttfamily,linewidth=14cm]
+\begin{frameng}
+\scriptsize 
+\begin{lstlisting}
 jadi@wonderland:~$ cal -3
-June 2014             July 2014            August 2014       
-Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
-1  2  3  4  5  6  7         1  2  3  4  5                  1  2  
-8  9  10 11 12 13 14  6  7  8  9  10 11 12  3  4  5  6  7  8  9
-15 16 17 18 19 20 21  13 14 15 16 17 18 19  10 11 12 13 14 15 16  
-22 23 24 25 26 27 28  20 21 22 23 24 25 26  17 18 19 20 21 22 23  
-29 30                 27 28 29 30 31        24 25 26 27 28 29 30  
-31     
+June 2014              July 2014              August 2014       
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa  
+1  2  3  4  5  6  7          1  2  3  4  5                   1  2  
+8  9  10 11 12 13 14   6  7  8  9  10 11 12   3  4  5  6  7  8  9  
+15 16 17 18 19 20 21   13 14 15 16 17 18 19   10 11 12 13 14 15 16  
+22 23 24 25 26 27 28   20 21 22 23 24 25 26   17 18 19 20 21 22 23  
+29 30                  27 28 29 30 31         24 25 26 27 28 29 30  
+                                              31            
 \end{lstlisting}
-\end{footnotesize}
-\end{latin}
+\end{frameng}
 
 و از این هم جالب‌تر، چیزی مانند
-\lr{\bidihl{cal 1979}}
+\lr{cal 1979}
 است که تقویم سال ۱۹۷۹ را نمایش می‌دهد.
-\begin{mybox}
+\begin{mdframed}
 با نصب برنامه 
 \lr{jcal}
 ، تمام این قابلیت‌ها را در تقویم جلالی ایران خواهید داشت و مثلا من می‌توانم با زدن دستور 
 \lr{jcal 1356}
  کشف کنم که روز تولدم چند شنبه بوده است.
-\end{mybox}
+\end{mdframed}
 \subsubsection*{\lr{history}}
 هزار دستوری که سابقا در سیستم اجرا شده‌اند را نشان می‌دهد.
 

@@ -28,22 +28,19 @@
 حال فایل متنی برنامه را دارم. اول آن را از حالت فشرده خارج می‌کنم. در حالت گرافیکی به سادگی با کلیک راست و انتخاب 
 \lr{Extract}
  و در حالت متنی با دستوری شبیه به:
-\begin{mybox}
-\flushleft
-\lr{\$ tar xf sib-0.8.tar.bz2}
-
-\end{mybox}
+\begin{frameng}
+\begin{lstlisting}
+\$ tar xf sib-0.8.tar.bz2
+\end{lstlisting}
+\end{frameng}
 حالا یک دایرکتوری سیب دارم که داخلش می‌شوم و فایل‌هایش را بررسی می‌کنم.
-\begin{mybox}
-\flushleft
-\lr{jadi@jubun:$\sim$/Desktop\$ cd sib-0.8/}
-
-\lr{jadi@jubun:$\sim$/Desktop/sib-0.8\$ ls}
-
-
-\lr{AUTHORS ChangeLog COPYING makefile misc pixmaps README src tools}
-
-\end{mybox}
+\begin{frameng}
+\begin{lstlisting}
+jadi@jubun:~/Desktop$ cd sib-0.8/
+jadi@jubun:~/Desktop/sib-0.8$ ls
+AUTHORS  ChangeLog  COPYING  makefile  misc  pixmaps  README  src  tools
+\end{lstlisting}
+\end{frameng}
 تقریبا همیشه فایلی هست که شروع کار باشد. اینجا اسمش 
 \lr{README}
  است، ممکن است دیگران اسم‌هایی مثل 
@@ -51,49 +48,44 @@
  یا 
 \lr{read.first}
  یا هر چیز دیگری بگذارند ولی کامل امشخص است که از کجا باید شروع کرد. در انتهای این فایل به سادگی نوشته:
-\begin{mybox}
-\flushleft
-\lr{Basic Installation}
+\begin{frameng}
+Basic Installation
 
 ==================
+\newline
+\newline
+1. make  
 
-\lr{1. make}
-
-
-\lr{2. make install (root user)}
-\end{mybox}
+2. make install ( root user )
+\end{frameng}
 به همین سادگی! در این مورد حتی نیازی به قدم سخت 
 \lr{configure/.}
  هم نیست. در بسیاری از موارد اول باید دستور 
 \lr{configure/.}
  را تایپ کنید تا چک کند که سیستم شما دارای همه موارد مورد نیاز برای نصب یک برنامه باشد و بعد برنامه را کامپایل و بعد نصب کنید. سه قدم مشهور اینها هستند:
-\begin{mybox}
-\flushleft
-\lr{./configure}
+\begin{frameng}
+./configure
 
+make
 
-\lr{make}
-
-
-\lr{sudo make install}
-
-\end{mybox}
+sudo make install
+\end{frameng}
 این سه دستور معمولا تمام برنامه‌ها را نصب می‌کنند مگر اینکه در راهنمای نصب برنامه، چیز دیگری نوشته شده باشد. البته باید توجه کنید که بخش کانفیگور معمولا در دفعات اول به 
 \lr{Error}
 هایی مبنی بر نبودن یکی دو کتابخانه یا برنامه لازم برای اجرای این برنامه می‌خورد که باید جدا جدا آن‌ها را پیدا و نصب کنید و دوباره کانفیگور را اجرا کند. بدون اجرای موفق کانفیگور، شانسی برای نصب نخواهید داشت (: بهترین روش هم جستجو است در مدیر نصب برنامه گرافیکی (مثلا 
-\lr{Synaptic}
-) به دنبال اسم برنامه‌هایی که کانفیگور از آن‌ها ایراد نصب گرفته است.
+\lr{Synaptic}) به دنبال اسم برنامه‌هایی که کانفیگور از آن‌ها ایراد نصب گرفته است.
 متاسفانه این برنامه 
-\lr{configure/.}
+\lr{./configure}
  ندارد که دقیق به ما بگوید آیا همه نیازمندی‌های برنامه نصب هستند یا نه در نتیجه - به شکل منطقی و کاری که از اول باید می‌شد - به فایل 
 \lr{README}
  رجوع می‌کنم و می‌خوانم که برنامه به این‌ها نیاز دارد: 
-\begin{mybox}
-	\flushleft
-	\lr{pygtk (>= 2.10)، python-sqlite2}
-	
-	\lr{python-notify (>=0.1).}
-\end{mybox}
+\begin{frameng}
+pygtk (>= 2.10)
+
+python-sqlite2
+
+python-notify (>=0.1)
+\end{frameng}
  حتی اگر نمی‌دانم اینها چیستند، 
 \lr{Synaptic}
  را باز می‌کنم و دنبالشان می‌گردم:
@@ -105,106 +97,70 @@
  را لازم دارد اما در اوبونتوی من، اسم بسته 
 \lr{python gtk}
  است. همچنین توجه دارم که در 
-\lr{synaptic}
-، دگمه جستجوی واقعی خیلی خیلی بهتر از آن جعبه جستجوی سریع بالای پنجره، کار می‌کند.
+\lr{synaptic}، دگمه جستجوی واقعی خیلی خیلی بهتر از آن جعبه جستجوی سریع بالای پنجره، کار می‌کند.
 
 حالا که وابستگی‌ها نصب شده‌اند، طبق دستور 
 \lr{README}
  اول 
 \lr{make}
  را اجرا می‌کنم و
-\begin{mybox}
-\flushleft
-\lr{\$ make}
-
-\lr{for d in src; do make -C \$d; [ \$? = 0 ] || exit 1 ; done}
-
-\lr{make[1]: Entering directory /home/jadi/Desktop/sib-0.8/src'}
-
-\lr{Byte-compiling python modules...}
-
-\lr{bgl2sdb.py dbmanager.py dbquery.py prefrence.py sib.py}
-
-\lr{Byte-compiling python modules (optimised versions) ...}
-
-\lr{bgl2sdb.py dbmanager.py dbquery.py prefrence.py sib.py}
-
-\lr{make[1]: Leaving directory/home/jadi/Desktop/sib-0.8/src'}
-
-\end{mybox}
+\begin{frameng}
+\begin{lstlisting}
+\$ make
+for d in src; do make -C \$d; [ \$? = 0 ] || exit 1 ; done
+make[1]: Entering directory /home/jadi/Desktop/sib-0.8/src'
+Byte-compiling python modules...
+bgl2sdb.py dbmanager.py dbquery.py prefrence.py sib.py
+Byte-compiling python modules (optimised versions) ...
+bgl2sdb.py dbmanager.py dbquery.py prefrence.py sib.py
+make[1]: Leaving directory/home/jadi/Desktop/sib-0.8/src'
+\end{lstlisting}
+\end{frameng}
 و بعد برای نصب در سیستم، 
 \lr{make install}
  را با دسترسی مدیرسیستم (و برای اینکار یک 
 \lr{sudo}
  جلوی دستور می‌گذارم):
-\begin{mybox}
-\flushleft
-\lr{\$ sudo make install}
-
-
-\lr{mkdir -p /usr/share/sib}
-
-
-\lr{mkdir -p /usr/share/pixmaps/sib}
-
-
-\lr{mkdir -p /usr/share/applications}
-
-
-\lr{mkdir -p /usr/share/gnome/autostart}
-
-
-\lr{mkdir -p /usr/bin}
-
-
-\lr{install -m644 COPYING /usr/share/sib/.}
-
-
-\lr{install -m644 pixmaps/*.png /usr/share/pixmaps/sib/.}
-
-
-\lr{install -m755 misc/sib /usr/bin/.}
-
-\end{mybox}
+\begin{frameng}
+\begin{lstlisting}
+$ sudo make install
+mkdir -p /usr/share/sib
+mkdir -p /usr/share/pixmaps/sib
+mkdir -p /usr/share/applications
+mkdir -p /usr/share/gnome/autostart
+mkdir -p /usr/bin
+install -m644 COPYING /usr/share/sib/.
+install -m644 pixmaps/*.png /usr/share/pixmaps/sib/.
+install -m755 misc/sib /usr/bin/.
+\end{lstlisting}
+\end{frameng}
 حالا احتمالا برنامه باید به درستی نصب شده باشد. آن را اجرا می‌کنم (:
-\begin{mybox}
-\flushleft
-\lr{\$ sib}
-
-\lr{Traceback (most recent call last):}
-
-\lr{\hspace{0.5cm}File "sib.py", line 411, in}
-
-\lr{\hspace{1cm}main()}
-
-\lr{\hspace{0.5cm}File "sib.py", line 179, in \textbf{init}}
-
-\lr{\hspace{1cm}self.DB\_con = dbquery.Database(\textbf{DATADIR})}
-
-\lr{\hspace{0.5cm}File "/usr/share/sib/dbquery.py", line 51, in \textbf{init}}
-
-\lr{\hspace{1cm}self.list\_of\_db()}
-
-\lr{\hspace{0.5cm}File "/usr/share/sib/dbquery.py", line 61, in list\_of\_db}
-
-\lr{\hspace{1cm}DBdir = os.listdir(self.home)}
-
-\lr{OSError: Errno 2 No such file or directory: '/home/jadi/.sib/'}
-
-\end{mybox}
+\begin{frameng}
+\begin{lstlisting}
+$ sib
+Traceback (most recent call last):
+File "sib.py", line 411, in 
+main()
+File "sib.py", line 179, in init
+self.DB_con = dbquery.Database(DATADIR)
+File "/usr/share/sib/dbquery.py", line 51, in init
+self.list_of_db()
+File "/usr/share/sib/dbquery.py", line 61, in list_of_db
+DBdir = os.listdir(self.home)
+OSError: [Errno 2] No such file or directory: '/home/jadi/.sib/'
+\end{lstlisting}
+\end{frameng}
 مثل اینکه درست اجرا نشد (: خطوط را می‌خوانم. این کاری است که نصب از سورس را کمی سخت کرده ولی فراموش نکنید که اگر مشغول نصب یک برنامه از فایل سورس هستید، یعنی در دنیای حرفه‌ای ها پا گذاشته‌اید و نباید از چیزی بترسید. خط آخر به وضوح نوشته که نمی‌تواند دایرکتوری 
 \lr{.sib}
  را در خانه من پیدا کند. این یک اشکال در روند نصب است. اول این ایراد را به نویسنده برنامه اطلاع می‌دهم و بعد خودم دستی یک دایرکتوری به نام 
 \lr{.sib}
  در خانه می‌سازم.
-\begin{mybox}
-\flushleft
-\lr{\$ mkdir $\sim$/.sib}
-
-
-\lr{\$ sib}
-
-\end{mybox}
+\begin{frameng}
+\begin{lstlisting}
+$ mkdir ~/.sib
+$ sib
+\end{lstlisting}
+\end{frameng}
 و حالا سیب به خوبی اجرا می‌شود. مطمئنا از این به بعد دیگر آن را از منو اجرا خواهم کرد و نه از خط فرمان.
 
 بگذارید یک نگاه دیگر به کل روند بیندازیم:
@@ -212,7 +168,7 @@
 فایل را دریافت کردیم
 فایل را از حالت فشرده خارج کردیم
 در اینجا نه، اما در حالت معمول با 
-\lr{.configure/}
+\lr{./configure}
  داشتن تمام نیازهای برنامه را بررسی کردیم
 آنقدر کتابخانه و برنامه جانبی نصب کردیم تا کانفیگور مطمئن شود که همه چیز مرتب است و با موفقیت اجرا بشود
 بعد دستور 
