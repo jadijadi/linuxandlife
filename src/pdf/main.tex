@@ -1,9 +1,10 @@
 \documentclass[12pt]{book}
+
+%% PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{listings}% for programing code environments
 \usepackage{tcolorbox}
 \usepackage{amsmath} %\ for math signs
 \usepackage{bidihl} %\ for hilight
-\usepackage{subcaption} 
 \usepackage{subfig} 
 \usepackage{wrapfig}
 \usepackage{mdframed}% for multi page box
@@ -12,25 +13,36 @@
 \usepackage{float} %\ for floating figures
 \usepackage{setspace}%\ for line spacing
 \usepackage{zref-perpage} % for footnote
+\usepackage{enumitem} % for change itemize default setting
+	\setlist[itemize]{itemsep=0.1\baselineskip}
+	\setlist[enumerate]{itemsep=0.1\baselineskip}
+
 \usepackage{xepersian} %\ for persian text
 
-\settextfont{B Nazanin}
-\setlatintextfont{Consolas}
+%% FONTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\settextfont{XB Roya}
+\setlatintextfont{Liberation Mono}
+\doublespacing
 
-\renewcommand{\labelitemi}{$‎\circ‎$}
-\renewcommand{\footnoterule}{%\ for width of footnote line
-	\hrule width \textwidth height 1pt
-}
+%% ENVIRONMENT SETTINGS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newtcolorbox{mybox}{boxrule=0pt,width=\textwidth,arc=0mm,colback=gray!20}
- 	
+
+\newenvironment{eng}{\vspace*{-0.5cm}\begin{latin}\singlespacing\flushleft}{\end{latin}}
+
+\newenvironment{frameng}{\begin{mdframed}\begin{eng}}{\end{eng}\end{mdframed}}
+
+\lstset{language=bash,basicstyle=\ttfamily,linewidth=1\textwidth,breaklines=true}
+
+%% FOOTNOTE SETTING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\footnoterule}{\hrule width \textwidth height 1pt}%\ for width of footnote line
 \zmakeperpage{footnote}% for reset footnote per page
 
-\onehalfspacing
+%% METADATA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \author{جادی میرمیرانی}
 \title{لینوکس و زندگی}
 %\date{}
 
-
+%% MAIN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 	\maketitle
 	\tableofcontents
@@ -52,31 +64,31 @@
 		\include{./sections/sect10}
 %		\include{./sections/sect11} %not complete
 		\include{./sections/sect12}
-		\include{./sections/sect13}
-		\include{./sections/sect14}
+	%	\include{./sections/sect13}
+	%	\include{./sections/sect14}
 %		\include{./sections/sect15} %not complete
-	\chapter{مباحث پیشرفته}
-		\include{./sections/sect16}
-%		\include{./sections/sect17} %not complete
-		\include{./sections/sect18}
-		\include{./sections/sect19}
-%		\include{./sections/sect20} %not complete
-		\include{./sections/sect21}
-	\chapter{جامعه لینوکس}
-		\include{./sections/sect22}
-	\chapter{زندگی حرفه‌ای}
-		\include{./sections/sect23}
-		\include{./sections/sect24}
-		\include{./sections/sect25}
-		\include{./sections/sect26}
-		\include{./sections/sect27}
-		\include{./sections/sect28}
-		\include{./sections/sect29}
-		\include{./sections/sect30}
-		\include{./sections/sect31}
-		\include{./sections/sect32}
-		\include{./sections/sect33}
-		\include{./sections/sect34}
-		\include{./sections/sect35}
+	%\chapter{مباحث پیشرفته}
+	%	\include{./sections/sect16}
+%	%	\include{./sections/sect17} %not complete
+	%	\include{./sections/sect18}
+	%	\include{./sections/sect19}
+%	%	\include{./sections/sect20} %not complete
+	%	\include{./sections/sect21}
+	%\chapter{جامعه لینوکس}
+	%	\include{./sections/sect22}
+%	\chapter{زندگی حرفه‌ای}
+%		\include{./sections/sect23}
+%		\include{./sections/sect24}
+%		\include{./sections/sect25}
+%		\include{./sections/sect26}
+%		\include{./sections/sect27}
+%		\include{./sections/sect28}
+%		\include{./sections/sect29}
+%		\include{./sections/sect30}
+%		\include{./sections/sect31}
+%		\include{./sections/sect32}
+%		\include{./sections/sect33}
+%		\include{./sections/sect34}
+%		\include{./sections/sect35}
 						
 \end{document}

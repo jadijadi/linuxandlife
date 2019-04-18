@@ -3,7 +3,7 @@
 
 \includegraphics[scale=1,width=\textwidth]{../files/images/sina_blog.png}
 
-تیتر صفحه با صفحه کلید عربی (احتمالا در ویندوز) تایپ شده که به جای «{\settextfont{Tahoma}ک}» از «{\settextfont{Tahoma}ك}»  و به جای «{\settextfont{Tahoma}ی}» از «{\settextfont{Tahoma}ي}}» استفاده می‌کند. 
+تیتر صفحه با صفحه کلید عربی (احتمالا در ویندوز) تایپ شده که به جای «{\settextfont{DejaVu Sans}ک}» از «{\settextfont{DejaVu Sans}ك}»  و به جای «{\settextfont{DejaVu Sans}ی}» از «{\settextfont{DejaVu Sans}ي}}» استفاده می‌کند. 
 همچنین طراح به اجبار به صفحه گفته از فونت 
 \lr{Tahoma}
  استفاده کند که یک فونت ویندوزی است. برای درست دیدن این صفحه در مرحله اول باید از طراح و نویسنده خواست که از استانداردهای فارسی استفاده کنند و در مرحله دوم،‌ برای حل موقتی مشکل (در اصل برای اضافه کردن امکان نمایش فارسی حروف عربی) باید فونت‌های استاندارد ویندوز را به سیستم اضافه کرد.
@@ -11,56 +11,18 @@
 در اوبونتو بسته‌ای به نام 
 \lr{ubuntu-restricted-extras}
  که مجموعه ای است از ابزارهایی که به علت مجوزهای محدود کننده‌ای که شرکت‌های سازنده روی آن ها گذشته‌اند نمی‌توانند روی سی دی اصلی اوبونتو عرضه شوند. بگذارید نگاهی به محتویات آن بیندازیم:
-\begin{mybox}
-	\flushleft
-	
-\lr{jadi@jubung:$\sim$\$ aptitude show ubuntu-restricted-extras}
-	
-\lr{Package: ubuntu-restricted-extras}
-	
-\lr{New: yes}
-	
-\lr{State: installed}
-	
-\lr{Automatically installed: no}
-	
-\lr{Version: 57}
-	
-\lr{Priority: optional}
-	
-\lr{Section: multiverse/metapackages}
-	
-\lr{Maintainer: Michael Vogt}
-	
-\lr{<michael.vogt@ubuntu.com>}
-	
-\lr{Architecture: amd64}
-	
-\lr{Uncompressed Size: 30.7 k}
-	
-\lr{Depends: ubuntu-restricted-addons}
-	
-\lr{Recommends: ttf-mscorefonts-installer, unrar, gstreamer0.10-plugins-bad-multiverse, libavcodec-extra-53}
-	
-\lr{Conflicts: ubuntu-restricted-extras}
+\begin{frameng}
+\begin{lstlisting}
+jadi@jubung:~$ aptitude show ubuntu-restricted-extras Package: ubuntu-restricted-extras
+New: yes State: installed Automatically installed: no Version: 57 Priority: optional Section: multiverse/metapackages Maintainer: Michael Vogt michael.vogt@ubuntu.com Architecture: amd64 Uncompressed Size: 30.7 k Depends: ubuntu-restricted-addons Recommends: ttf-mscorefonts-installer, unrar, gstreamer0.10-plugins-bad-multiverse, libavcodec-extra-53 Conflicts: ubuntu-restricted-extras Description: Commonly used restricted packages for Ubuntu This package depends on some commonly used packages in the Ubuntu multiverse repository.
 
-\lr{Description: Commonly used restricted packages for Ubuntu}
-	
-\lr{This package depends on some commonly used packages in the Ubuntu multiverse repository.}
+Installing this package will pull in support for MP3 playback and decoding, support for various other audio formats (GStreamer plugins), Microsoft fonts, Flash plugin, LAME (to create compressed audio files), and DVD playback.
 
-\lr{Installing this package will pull in support for MP3 playback and decoding, support for various other audio formats (GStreamer plugins), Microsoft fonts, Flash plugin,}
-	
-\lr{LAME (to create compressed audio files), and DVD playback.}
-	
-\lr{Please note that this does not install libdvdcss2, and will not let you play encrypted DVDs. For more information, see}
-	
-\lr{https://help.ubuntu.com/community/RestrictedFormats /PlayingDVDs}
+Please note that this does not install libdvdcss2, and will not let you play encrypted DVDs. For more information, see https://help.ubuntu.com/community/RestrictedFormats/PlayingDVDs
 
-	
-\lr{Please also note that packages from multiverse are restricted by copyright or legal issues in some countries. See http://www.ubuntu.comubuntu/licensing for more information.}
-
-	
-\end{mybox}
+Please also note that packages from multiverse are restricted by copyright or legal issues in some countries. See http://www.ubuntu.com/ubuntu/licensing for more information
+\end{lstlisting}
+\end{frameng}
 آنطور که این دستور می‌گوید، این بسته حاوی پشتیبانی از فرمت 
 \lr{mp3}
  و فرمت‌های صوتی تصویری دیگر، پشتیبانی از فونت‌های مایکروسافت، فلش و پخش دی وی دی است. پس احتمالا با نصب آن، مشکل ما حل خواهد شد.
@@ -69,9 +31,7 @@
 
 به عنوان یک نکته اضافی ، خوب است بدانیم که هر کاربر گنو/لینوکس می‌تواند با ساخت پوشه‌ای به اسم 
 \lr{.fonts}
- در خانه خودش ( 
-\lr{home folder}
- ) و کپی کردن هر فونتی که لازم دارد درون آن و خروج و ورود مجدد به سیستم، به آن فونت‌ها دسترسی داشته باشد. مثلا کپی کردن فایل 
+ در خانه خودش (\lr{home folder}) و کپی کردن هر فونتی که لازم دارد درون آن و خروج و ورود مجدد به سیستم، به آن فونت‌ها دسترسی داشته باشد. مثلا کپی کردن فایل 
 \lr{tahoma.ttf}
  و 
 \lr{tahomab.ttf}
