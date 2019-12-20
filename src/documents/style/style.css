@@ -56,3 +56,19 @@ p {
 .prevchapter {
 	text-align: right;
 }
+
+@media (max-width:768px){
+
+	body > div.container > div > div:nth-child(2) > div.row{
+		width: 100%;
+	}
+	body > div.container > div > div:nth-child(2) > div > div.col-md-8{
+		padding-right: 25px;
+	}
+	body > div.container > div > div:nth-child(2) > div > div.col-md-3{
+		padding-right: 30px;
+	}
+	body > div.container > div > div:nth-child(2) > div > div.col-md-8 > p{
+		overflow: scroll;
+	}
+}
