@@ -49,6 +49,10 @@ p {
 	text-align: center;
 }
 
+.article-container {
+	margin: 0 10px;
+}
+
 .nextchapter {
    text-align: left;
 }
