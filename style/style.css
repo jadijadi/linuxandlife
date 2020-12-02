@@ -1,0 +1,62 @@
+@import url('web-fonts.css');
+pre {
+    direction: ltr;
+}
+
+.top-space-reserver {
+  margin-top: 32pt;
+}
+
+img {
+  max-width: 750px;
+}
+
+body {
+	font-family: 'IranianSerifWeb', serif;
+	font-size:17px; !important;
+	word-spacing: 0.9px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'MitraWeb', serif;
+	font-weight:700;
+}
+
+a.list-group-item{
+	font-size:15px;
+}
+
+.footer {
+	text-align: center;
+	font-size: 1em;
+	direction: rtl;
+}
+
+.articletitle {
+	margin-bottom: 24px;
+}
+
+blockquote {
+	font-size: 1.2em;
+}
+
+p {
+	font-size: 100%;
+	line-height: 1.6;
+}
+
+.support {
+	text-align: center;
+}
+
+.article-container {
+	margin: 0 10px;
+}
+
+.nextchapter {
+   text-align: left;
+}
+
+.prevchapter {
+	text-align: right;
+}

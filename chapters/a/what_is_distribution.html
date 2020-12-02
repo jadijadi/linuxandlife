@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>لینوکس و زندگی | مفهوم توزیع و منابع</title>
+  <link  rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" /><link  rel="stylesheet" href="/style/bootstrap-rtl.css" /><link  rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css" /><link  rel="stylesheet" href="/style/style.css" />
+
+  
+
+  
+    <meta name="generator" content="DocPad v6.78.6" />
+</head>
+
+<body role="document">
+  <script defer="defer"  src="/vendor/jquery-1.11.1.min.js"></script><script defer="defer"  src="/scripts/script.js"></script><script defer="defer"  src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <!-- show the chapters -->
+
+    <div  class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">لینوکس و زندگی</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">روی جلد</a></li>
+            <li><a href="/about.html">درباره</a></li>
+            <li><a href="/download.html">دانلود</a></li>
+            <li><a href="/support.html"><strong >حمایت</strong ></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  <div class="container" role="main">
+ 
+  
+  <div class="row"><div class="row-md-10 top-space-reserver" ></div><div>
+  
+  <div class="row">
+  
+    <div class="row"><div class="col-md-12"><br><br></div></div>
+     
+    <div class="col-md-8">
+
+      
+      
+      
+        
+        
+        
+        
+         
+          
+          
+        
+       
+        
+        
+      
+        
+        
+        
+        
+         
+          
+          
+        
+       
+        
+        
+      
+        
+        
+        
+        
+         
+          
+          
+        
+       
+        
+        
+      
+        
+        
+        
+        
+         
+          
+          
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+         
+          
+          
+           
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+
+	  
+
+<div class="row">
+  <div class="col-md-6 prevchapter" >&#9658<a href="/chapters/whygnulinux.html" class="btn btn-default">
+		چرا گنو/لینوکس</a>      
+  </div>
+  <div class="col-md-6 nextchapter"><a href="/chapters/installing_linux.html" class="btn btn-default">
+		نصب لینوکس</a>&#9668
+  </div>
+</div>
+
+
+<div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="25" style="width: 0%;"><span class="sr-only">0% Complete</span></div>
+</div>      
+
+<h1 class="articletitle">مفهوم توزیع و منابع</h1>		
+     
+      
+<p>توزیع یا Distribution یکی از اولین چیزهایی است که بعد از تصمیم به امتحان لینوکس، خواهید شنید.بعضی‌ها از اوبونتو حرف می‌زنند، بعضی‌ها از اوپن زوزه و بعضی‌ها هم به شما پارسیکس را پیشنهاد می‌کنند. بدون شک حینی که کسی دارد به شما اوبونتو را پیشنهاد می‌کند، یک نفر وسط حرفش خواهد پرید و پیشنهاد خواهد داد از پی سی او اکس لینوکس یا لینوکس مینت که ساده‌تر است استفاده کنید.</p>
+
+<p>معمولا این بحث‌ها خیلی گیج کننده می‌شوند و در نهایت هم فقط باعث گمراهی و گیج شدن. اما واقعا بحث سر چیست؟</p>
+
+<h2>توزیع</h2>
+
+<p>از بخش‌های قبلی، به یاد دارید که لینوکس فقط یک هسته است و سیستم‌عاملی که ما واقعا استفاده می‌کنیم باید گنو/لینوکس نامیده شود. در واقع هسته‌ای به اسم لینوکس <br />وجود دارد که بعد از ترکیب با مجموعه عظیمی از نرم‌افزارهای دیگر، یک سیستم عامل مدرن مثل این را تشکیل می‌دهد.</p>
+
+<p><img src="/images/distro_sample.jpg"></p>
+
+<p>در واقع شما اگر شخصا بخواهید از صفر یک سیستم لینوکس راه بیاندازید، باید اول شخصا هسته را کامپایل کنید و بعد از طریق نصب یک مدیر بوت (مثلا گراب) به کامپیوتر بگویید که بعد از نصب آن هسته را لود کند و علاوه بر این، تمام برنامه‌های مورد نظرتان (مثلا خط فرمان، محیط گرافیکی، ماشین حساب، آفیس و …) را هم کامپایل و به همدیگر متصل کنید.</p>
+
+<p>این کار سختی است و حتی برای کسی که کاملا آن را بلد باشد، حداقل چندین روز به طول می‌کشد. بله (: چندین روز. اما در اکثر مواقع نیازی به این همه دردسر نیست. شرکت‌ها و افراد علاقمند یکبار تمام این کارها را کرده‌اند و با اضافه کردن یک روند نصب معمولا گرافیکی و راحت، یک «توزیع» لینوکس برای شما ساخته‌اند.</p>
+
+<p>مثلا اگر شما به سراغ توزیع اوبونتو بروید، دیسکی را در دست خواهید داشت که مهندسان شرکت کانونیکال سر هم کرده‌اند. آن‌ها یک هسته مناسب و تست شده را به علاوه یک میزکار و کلی برنامه مفید کامپایل و تنظیم کرده‌اند که شما با پیگیری یک روند نصب ساده و گرافیکی می‌توانید آن را روی کامپیوتر خود نصب کنید.</p>
+
+<p>اگر به جای اوبونتو، توزیع جذابی مثل پارسیکس را انتخاب کنید، با یک سی دی روبرو خواهید بود که آلن باغومیان از کنار هم چیدن هسته و برنامه‌هایی که خودش ترجیح داده ساخته و کاری کرده که زبان فارسی به شکل پیش‌فرض در سیستم فعال باشد.</p>
+
+<p>می‌بینید که توزیع چیز خیلی عجیبی نیست. واقعا هم توزیع‌ها چیزهای عجیبی نیستند بلکه مجموعه‌ای هستند از چند برنامه و یک هسته و کمی تنظیمات. به عبارت دیگر، شما می‌توانید هر برنامه‌ای را در هر توزیعی نصب کنید و انتخاب یک توزیع فقط نشان دهنده برنامه‌ها و تنظیمات پیش فرض است.</p>
+
+<p>البته این را هم به یاد داشته باشید که به جز بسته‌ها و تنظیمات پیش‌فرض، چند چیز دیگر هم با انتخاب توزیع، تغییر می‌کنند از جمله مدیریت بسته و فلسفه توزیع.</p>
+
+<h2>مدیریت بسته</h2>
+
+<p>همانطور که بالاتر خواندید، یک سیستم عامل یونیکسی (مثل گنو/لینوکس) مجموعه‌ای است از بسته‌ها. حالا فرض کنید بخواهید یک بسته به سیستم خود اضافه کنید یا از آن کم کنید. برای اینکار معمولا یک یا چند برنامه ویژه وجود دارند که وابسته به توزیعی هستند که انتخاب می‌کنید. مثلا همه توزیع‌های مبتنی بر دبیان (مثل اوبونتو و پارسیکس)، از مدیر بسته‌ای به نام apt و در سطح فنی‌تر dpkg استفاده می‌کنند در حالی که توزیع‌های مشابه ردهت مدیر بسته‌های مبتنی بر rpm دارند. در این مورد در بخش انتخاب توزیع بیشتر صحبت خواهیم کرد.</p>
+
+<h2>فلسفه توزیع</h2>
+
+<p>خیلی‌ها دوست دارند از این شعار استفاده کنند که «گنو/لینوکس فقط یک سیستم‌عامل نیست» (: واقعا هم اینطور است. نرم‌افزار آزاد یک فلسفه قوی با پشتوانه نظری و اجتماعی است و لینوکس‌های مختلف هم دیدگاه‌های مختلفی نسبت به جهان دارند. بعضی‌ها مانند آرچ لینوکس معتقد به اصل سادگی هستند،‌ بعضی‌ها مثل دبیان معتقد به پایداری و بعضی‌ها مثل مینت معتقد به کاربر پسند بودن. شما با انتخاب یک توزیع، فلسفه آن توزیع را هم انتخاب می‌کنید و این فلسفه‌ها با هم تفاوت می‌کنند. برای بعضی‌ها در حد فلسفی و اخلاقی درست است که از یک توزیع کاملا پایبند به اصول آزادی نرم‌افزار مثل گنوسنس استفاده کنند و بعضی‌ها هم به شما اصرار خواهند کرد که از لینوکس‌هایی مثل مینت استفاده کنید که با صرف نظر کردن از بخش‌هایی از فلسفه آزادی نرم‌افزار، کاربر پسندتر شده و مثلا فایل‌های صوتی تصویری انحصاری را بدون هیچ شکایتی پخش می‌کند.</p>
+
+
+<div class="progress" style="margin-bottom: 0;">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="25" style="width: 0%;"><span class="sr-only">0% Complete</span></div>
+</div>      
+<div class="row">
+  <div class="col-md-6 prevchapter" >&#9658<a href="/chapters/whygnulinux.html" class="btn btn-default">
+		چرا گنو/لینوکس</a>      
+  </div>
+  <div class="col-md-6 nextchapter"><a href="/chapters/installing_linux.html" class="btn btn-default">
+		نصب لینوکس</a>&#9668
+  </div>
+</div>
+
+<br />
+      
+
+    </div > <!-- content -->
+    
+    
+    
+    
+    <div class="col-md-3" > <!-- left menu -->
+      
+        
+			<a class="list-group-item active" >فهرست</a>
+          
+        
+		<a class="list-group-item" href=/chapters/about.html> 
+		   
+		     درباره این کتاب
+		   
+		</a>
+      
+        
+			<a class="list-group-item active" >اصول و مقدمات</a>
+          
+        
+		<a class="list-group-item" href=/chapters/linux_philosophy.html> 
+		   
+		     فلسفه آزادی نرم‌افزار
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/gnulinuxhistory.html> 
+		   
+		     تاریخچه گنو/لینوکس
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/whygnulinux.html> 
+		   
+		     چرا گنو/لینوکس
+		   
+		</a>
+      
+        
+			<a class="list-group-item active" >لینوکس روزمره</a>
+          
+        
+		<a class="list-group-item" href=/chapters/installing_linux.html> 
+		   
+		     نصب لینوکس
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/common_steps_after_desktop_install.html> 
+		   
+		     قدم های مرسوم بعد از نصب لینوکس دسکتاپ
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/how_to_install_software.html> 
+		   
+		     نصب نرم افزارها
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/everyday_life.html> 
+		   
+		     نرم‌افزارهای روزمره
+		   
+		</a>
+      
+        
+			<a class="list-group-item active" >مباحث پیشرفته</a>
+          
+        
+		<a class="list-group-item" href=/chapters/directory_structure.html> 
+		   
+		     ساختار فایل‌ها و دایرکتوری‌ها
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/commandline_basics.html> 
+		   
+		     آشنایی با خط فرمان
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/common_shell_commands.html> 
+		   
+		     دستورات معمول خط فرمان
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/commandline_advanced.html> 
+		   
+		     مباحث پیشرفته خط فرمان
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/how_to_connect_domain_and_host.html> 
+		   
+		     چگونه یک دامین و یک هاست را به یکدیگر متصل کنیم
+		   
+		</a>
+      
+        
+			<a class="list-group-item active" >جامعه لینوکس</a>
+          
+        
+		<a class="list-group-item" href=/chapters/get_help.html> 
+		   
+		     کمک گرفتن و ادامه راه
+		   
+		</a>
+      
+        
+			<a class="list-group-item active" >زندگی حرفه‌ای</a>
+          
+        
+		<a class="list-group-item" href=/chapters/linux_as_a_job.html> 
+		   
+		     لینوکس به عنوان شغل
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/does_university_woth_it.html> 
+		   
+		     آیا به دانشگاه بروم
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/is_there_a_good_company.html> 
+		   
+		     آیا شرکت خوبی هست که قدر من رو بدونه
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/datacenter.html> 
+		   
+		     دیتاسنترها
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/choosing_your_path.html> 
+		   
+		     انتخاب مسیر حرفه ای
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/how_to_learn_english.html> 
+		   
+		     چگونه در انگلیسی پیشرفت کنیم
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/is_internet_a_place_to_earn_money.html> 
+		   
+		     آیا خواهید تونست [بدون تخصص] از اینترنت درآمد کسب کنید؟
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/hacker_manifesto.html> 
+		   
+		     بیانیه هکرها
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/being_hacker.html> 
+		   
+		     چگونه هکر شویم
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/how_to_learn_x.html> 
+		   
+		     چگونه فلان چیز رو یاد بگیرم
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/concentrate.html> 
+		   
+		     ایجاد انگیزه و تمرکز
+		   
+		</a>
+      
+      <p></p>
+      <div class="alert alert-success support" role="alert">
+      <a href=/support.html>از این پروژه حمایت کنید</a>
+      </div>
+
+ 
+    </div> <!--left menu-->
+    
+    
+    
+  </div> <!-- content row -->
+  </div> <!-- row full page -->
+  </div>
+  </div>
+
+  <div class="well">
+	<p class="footer">
+		کتاب لینوکس و زندگی کاری است از 
+		<a href="http://jadi.net">جادی</a> روی 
+		<a href="https://github.com/jadijadi/justforfun">گیت هاب</a>
+		<br />
+		<a href=/>روی جلد</a> | <a href="/support.html">حمایت</a> | <a href="/about.html">درباره</a>
+	</p>
+  </div >
+
+
+
+</div > <!-- main container -->
+</body >
+</html > 
+

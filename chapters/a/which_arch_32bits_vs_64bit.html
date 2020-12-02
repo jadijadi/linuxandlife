@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>لینوکس و زندگی | معماری های لینوکس</title>
+  <link  rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" /><link  rel="stylesheet" href="/style/bootstrap-rtl.css" /><link  rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css" /><link  rel="stylesheet" href="/style/style.css" />
+
+  
+
+  
+    <meta name="generator" content="DocPad v6.78.6" />
+</head>
+
+<body role="document">
+  <script defer="defer"  src="/vendor/jquery-1.11.1.min.js"></script><script defer="defer"  src="/scripts/script.js"></script><script defer="defer"  src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <!-- show the chapters -->
+
+    <div  class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">لینوکس و زندگی</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">روی جلد</a></li>
+            <li><a href="/about.html">درباره</a></li>
+            <li><a href="/download.html">دانلود</a></li>
+            <li><a href="/support.html"><strong >حمایت</strong ></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  <div class="container" role="main">
+ 
+  
+  <div class="row"><div class="row-md-10 top-space-reserver" ></div><div>
+  
+  <div class="row">
+  
+    <div class="row"><div class="col-md-12"><br><br></div></div>
+     
+    <div class="col-md-8">
+
+      
+      
+      
+        
+        
+        
+        
+         
+          
+          
+        
+       
+        
+        
+      
+        
+        
+        
+        
+         
+          
+          
+        
+       
+        
+        
+      
+        
+        
+        
+        
+         
+          
+          
+        
+       
+        
+        
+      
+        
+        
+        
+        
+         
+          
+          
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+         
+          
+          
+           
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+        
+        
+        
+        
+        
+       
+        
+        
+      
+
+	  
+
+<div class="row">
+  <div class="col-md-6 prevchapter" >&#9658<a href="/chapters/whygnulinux.html" class="btn btn-default">
+		چرا گنو/لینوکس</a>      
+  </div>
+  <div class="col-md-6 nextchapter"><a href="/chapters/installing_linux.html" class="btn btn-default">
+		نصب لینوکس</a>&#9668
+  </div>
+</div>
+
+
+<div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="25" style="width: 0%;"><span class="sr-only">0% Complete</span></div>
+</div>      
+
+<h1 class="articletitle">معماری های لینوکس</h1>		
+     
+      
+<p>معمولا وقتی میزکار و توزیع خود را انتخاب کردید، می‌توانید به سراغ دانلود دیسک و نصب لینوکس بروید اما گاهی یک سوال کمی حرفه‌ای تر شما را گیج می‌کند: ۳۲ بیت یا ۶۴ بیت.</p>
+
+<p>از قدیم تقریبا تمام توزیع‌های مشهور لینوکس هم با نسخه ۳۲ بیت عرضه می‌شدند و هم به شکل نسخه ۶۴ بیتی و اینکه کاربر کدام را دانلود و نصب می‌کرد وابسته به فاکتورهای مختلفی بود. تا یکسال پیش تقریبا اکثر توزیع‌های بزرگ به شکل پیش‌فرض شما را به سمت نسخه‌های ۳۲ بیتی راهنمایی می‌کردند و حالا توزیع‌هایی مثل اوبونتو و فدورا در سایت‌هایشان نسخه‌های ۶۴ بیتی را گزینه پیش فرض قرار داده‌اند. اما اول بگذارید ببینیم مفهوم این عددها چیست.</p>
+
+<p>جریان چیست؟</p>
+
+<p>عددهایی مثل ۳۲ یا ۶۴ نشان دهنده اندازه (عرض) حافظه‌ای است که یک پردازشگر (سی پی یو) می‌تواند به آن دسترسی پیدا کند. اگر بخواهیم عبارت را دقیق‌تر بیان کنیم باید بگویم که گفتن عبارت «کامپیوتر ۶۴ بیتی» یعنی پردازشگر این کامپیوتر رجیسترهایی به اندازه ۶۴ بیت داشته و در هر عملیات واحد می‌تواند روی ۶۴ بیت پردازش انجام دهد.</p>
+
+<p>مشخص است که یک کامپیوتر ۶۴ بیتی با داشتن رجیسترهای بزرگتر به راحتی می‌تواند تمام دستورات و برنامه‌های ۳۲ بیتی را اجرا کند ولی معکوس این جریان صادق نیست. پس اگر شما یک کامپیوتر ۶۴ بیتی دارید مجاز هستید روی آن سیستم عامل ۳۲ بیتی یا ۶۴ بیتی نصب کنید ولی اگر از یک کامپیوتر ۳۲ بیتی استفاده می‌کنید، نباید به سراغ نسخه ۶۴ بیتی سیستم عامل‌ها بروید. البته واقعا نیاز به استرس نیست، خبر خوش من این است : به احتمال خیلی زیاد شما یک کامپیوتر ۶۴ بیتی دارید.</p>
+
+<p>فهرست پروسس‌های ۶۴ بیت</p>
+
+<p>چون در دنیای ویندوز سیستم‌عامل‌های ۶۴ تازه برای کارهای دسکتاپ مشهور شده‌اند، عده‌ای هیجان دارند که درباره آن صحبت کنند اما واقعیت این است که مفهوم پروسسور ۶۴ بیتی مفهومی کاملا جا افتاده و حتی قدیمی است و اگر کامپیوتر شما از سال ۲۰۰۸ به بعد ساخته شده، به احتمال زیاد معماری ۶۴ بیتی دارد. فهرست زیر نشان دهنده پردازنده‌های ۶۴ بیت موجود است:</p>
+
+<p>AMD</p>
+
+<p>Athlon64, Athlon FX, Athlon X2, Phenom, Semprons that use AM2/AM2+/AM3 socket, Turion64 <br />Intel</p>
+
+<p>F and 5x1 series Pentium 4 using the &quot;Prescott&quot; core<br />  Pentium D<br />  Core 2 (Solo, Duo &amp; Quad)<br />  Core i3 (all)<br />  Core i5 (all)<br />  Core i7 (all) <br />VIA</p>
+
+<p>Isiah <br />و احتمالا هر چیزی که در آینده ساخته شود هم از همین معماری بهره خواهد برد. در صورتی که همین حالا هم پشت یک کامپیوتر لینوکسی نشسته‌اید، با زدن دستور زیر می‌توانید پهنای رجیسترهای خود را بررسی کنید:</p>
+
+<p>grep --color=always -iw lm /proc/cpuinfo<br />در صورتی که خروجی این دستور حاوی lmهای رنگی باشد، می‌گوید که سی‌پی‌یو(ها)ی شما از حالت long mode یا همان آدرس دهی ۶۴ بیتی پشتیبانی می‌کنند.</p>
+
+<p>مقایسه</p>
+
+<p>سرعت</p>
+
+<p>بر اساس تست‌های انجام شده و عقل سلیم، یک سیستم ۶۴ بیت سریعتر از یک سیستم ۳۲ بیت کار می‌کند. اما احتمالا برایتان جالب است که بگویم تقریبا هیچ انسان عادی نمی‌تواند تفاوت سرعت اجرای برنامه‌های معمول در دو حالت ۳۲ و ۶۴ بیت را تشخیص بدهد چون تست‌ها به عددهای بین ۵ تا ۱۵ درصد سریعتر شدن برنامه‌ها اشاره می‌کنند. مساله این است که برنامه‌های ۶۴ بیت دقیقا همان برنامه‌های ۳۲ بیت هستند که دوباره کامپایل شده‌اند و هیچ بهینه‌سازی خاصی برای استفاده از تمام قابلیت‌های پروسسور در آن‌ها صورت نگرفته. پس اگر فکر می‌کنید با نصب ۶۴ بیت به سرعت خیلی بهتری می‌رسید، تجدید نظر کنید.</p>
+
+<p>حافظه</p>
+
+<p>از نظر ریاضی یک سیستم ۳۲ بیتی می‌تواند تا ۴ گیگابایت حافظه و یک سیستم ۶۴ بیت تا ۱۶.۸ میلیون ترابایت (۱۶ اگزابایت) حافظه را آدرس دهی کند. پس اگر شما ۸ گیگابایت رم داشته باشید، در حالت عادی یک سیستم ۳۲ بیتی فقط خواهد توانست از ۴ گیگ آن استفاده کند در حالی که یک سیستم ۶۴ می‌تواند میلیون‌ها برابر بزرگتر از آن‌ را هم کنترل کند. اما این اصلا به این معنی نیست که اگر بیشتر از ۴ گیگ رم دارید، ملزم به نصب ۶۴ بیت هستید. از مدت‌ها پیش، یک افزونه در کرنل به نام Physical Address Extention که به شکل مخفف PAE خوانده می‌شود، محدودیت آدرس دهی کرنل‌های ۳۲ بیتی را به ۶۴ گیگ افزایش داده.</p>
+
+<p>اگر بیشتر از ۴ گیگابایت رم دارید و می‌خواهید از یک سیستم عامل (و در نتیجه کرنل ۳۲ بیتی) استفاده کنید باید مطمئن شوید که کرنل pae را نصب کرده‌اید. معمولا می‌توانید این کرنل را در مخازن با جستجو به دنبال pae پیدا کرده و نصب کنید. با توجه به طبیعی‌تر شدن داشتن رم‌های بالای ۴ گیگ، بعضی توزیع‌های مشهور (از جمله اوبونتو) در نسخه‌های اخیر خود به شکل پیش فرض از کرنل PAE استفاده می‌کنند.</p>
+
+<p>سازگاری</p>
+
+<p>تقریبا تا دو سال قبل، استفاده از یک لینوکس ۶۴ بیت با دردسرهایی مثل سخت تر بودن نصب بعضی برنامه‌ها (بخصوص فلش و جاوا) همراه بود. این مشکل حالا تا حد زیادی مرتفع شده. البته کماکان نصب یک سیستم ۶۴ بیتی ممکن است در لحظاتی باعث دردسرهایی در نصب برنامه های جدید بشود. مثلا برنامه اسکایپ یا یک بازی جدید که توسط یک کمپانی به شکل باینری برای لینوکس عرضه شده ممکن است روی سیستم‌های ۳۲ بیت فقط با دانلود و دبل کلیک کردن اجرا شود اما برای نصب روی یک سیستم ۶۴ بیت نیازمند درک / کار بیشتری باشد (نصب کتابخانه‌های ۳۲ بیتی سازگار کننده). اما این واقعا به ترسناکی قدیم نیست و حداقل انتظار می‌رود که تمام برنامه‌های معمول روی هر دو نسخه عرضه شوند.</p>
+
+<p>باحال بودن. ۶۴ بیت برای خیلی‌ها یک مفهوم جدید است و هیجان انگیز. آدم‌ها دوست دارند کارهای جدید بکنند و «متفاوت» باشند و در نتیجه نصب و استفاده از یک سیستم ۶۴ بیت با اینکه در عمل هیچ تفاوتی با نصب و استفاده از یک سیستم ۳۲ بیت ندارد، برای عده‌ای کشش خاص خودش را دارد.</p>
+
+<p>و حرف نهایی</p>
+
+<p>برای یک کاربر خانگی رومیزی، تفاوت بزرگی بین سیستم‌های ۳۲ بیت و ۶۴ بیت وجود ندارد. اگر سیستم ۳۲ بیت نصب می‌کنید و بیشتر از چهار گیگابایت رم دارید باید مطمئن شوید که از کرنل pae استفاده می‌کنید تا تمام حافظه‌تان استفاده شود و اگر سیستم ۶۴ بیت نصب می‌کنید باید آماده باشید که یک روز یک برنامه بسته برایتان کمی دردسر درست کند و مجبور بشوید سراغ نصب چند لایبری ۳۲ بیت از مخازنتان بروید.</p>
+
+<p>اگر هم نظر من را می‌خواهید باید بگویم که دوباره نوشته‌های بالا را بخوانید و خودتان انتخاب کنید چون این دو گزینه تقریبا مساوی همدیگر هستند. یک راه حل هم این است که اگر هیچ ایده‌ای ندارید از سیستمی استفاده کنید که سایت دانلود رسمی همان توزیع به شما پیشنهاد می‌دهد.</p>
+
+<p>نکات</p>
+
+<ul>
+<li><a href="https://help.ubuntu.com/community/32bit_and_64bit">صفحه ویکی جامعه اوبونتو در مورد انتخاب بین ۳۲ و ۶۴ بیت</a></li>
+<li>در دنیای لینوکس کرنل‌های ۶۴ بیتی معمولا با پسوند 64_ و سیستم‌عامل‌های ۳۲ بیتی با پسوندهایی مانند i686 یا i386 شناخته می‌شوند</li>
+<li>بر اساس خروجی این دستور می‌بینید که من (جادی) از یک کرنل ۳۲ بیتی (i686) با قابلیت دسترسی به حافظه بیشتر از ۴ گیگابایت (PAE) و علیرضا (cyletech) از یک کرنل ۶۴ بیتی (_64) استفاده می‌کنیم.
+$ uname -a
+Linux jedora 3.6.9-2.fc17.i686.PAE #1 SMP Tue Dec 4 14:15:28 UTC 2012 i686 i686 i386 GNU/Linux</li>
+</ul>
+
+<p>Linux cyletech 3.5.0-34-generic #55-Ubuntu SMP Thu Jun 6 20:18:19 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux</p>
+
+
+<div class="progress" style="margin-bottom: 0;">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="25" style="width: 0%;"><span class="sr-only">0% Complete</span></div>
+</div>      
+<div class="row">
+  <div class="col-md-6 prevchapter" >&#9658<a href="/chapters/whygnulinux.html" class="btn btn-default">
+		چرا گنو/لینوکس</a>      
+  </div>
+  <div class="col-md-6 nextchapter"><a href="/chapters/installing_linux.html" class="btn btn-default">
+		نصب لینوکس</a>&#9668
+  </div>
+</div>
+
+<br />
+      
+
+    </div > <!-- content -->
+    
+    
+    
+    
+    <div class="col-md-3" > <!-- left menu -->
+      
+        
+			<a class="list-group-item active" >فهرست</a>
+          
+        
+		<a class="list-group-item" href=/chapters/about.html> 
+		   
+		     درباره این کتاب
+		   
+		</a>
+      
+        
+			<a class="list-group-item active" >اصول و مقدمات</a>
+          
+        
+		<a class="list-group-item" href=/chapters/linux_philosophy.html> 
+		   
+		     فلسفه آزادی نرم‌افزار
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/gnulinuxhistory.html> 
+		   
+		     تاریخچه گنو/لینوکس
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/whygnulinux.html> 
+		   
+		     چرا گنو/لینوکس
+		   
+		</a>
+      
+        
+			<a class="list-group-item active" >لینوکس روزمره</a>
+          
+        
+		<a class="list-group-item" href=/chapters/installing_linux.html> 
+		   
+		     نصب لینوکس
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/common_steps_after_desktop_install.html> 
+		   
+		     قدم های مرسوم بعد از نصب لینوکس دسکتاپ
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/how_to_install_software.html> 
+		   
+		     نصب نرم افزارها
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/everyday_life.html> 
+		   
+		     نرم‌افزارهای روزمره
+		   
+		</a>
+      
+        
+			<a class="list-group-item active" >مباحث پیشرفته</a>
+          
+        
+		<a class="list-group-item" href=/chapters/directory_structure.html> 
+		   
+		     ساختار فایل‌ها و دایرکتوری‌ها
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/commandline_basics.html> 
+		   
+		     آشنایی با خط فرمان
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/common_shell_commands.html> 
+		   
+		     دستورات معمول خط فرمان
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/commandline_advanced.html> 
+		   
+		     مباحث پیشرفته خط فرمان
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/how_to_connect_domain_and_host.html> 
+		   
+		     چگونه یک دامین و یک هاست را به یکدیگر متصل کنیم
+		   
+		</a>
+      
+        
+			<a class="list-group-item active" >جامعه لینوکس</a>
+          
+        
+		<a class="list-group-item" href=/chapters/get_help.html> 
+		   
+		     کمک گرفتن و ادامه راه
+		   
+		</a>
+      
+        
+			<a class="list-group-item active" >زندگی حرفه‌ای</a>
+          
+        
+		<a class="list-group-item" href=/chapters/linux_as_a_job.html> 
+		   
+		     لینوکس به عنوان شغل
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/does_university_woth_it.html> 
+		   
+		     آیا به دانشگاه بروم
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/is_there_a_good_company.html> 
+		   
+		     آیا شرکت خوبی هست که قدر من رو بدونه
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/datacenter.html> 
+		   
+		     دیتاسنترها
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/choosing_your_path.html> 
+		   
+		     انتخاب مسیر حرفه ای
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/how_to_learn_english.html> 
+		   
+		     چگونه در انگلیسی پیشرفت کنیم
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/is_internet_a_place_to_earn_money.html> 
+		   
+		     آیا خواهید تونست [بدون تخصص] از اینترنت درآمد کسب کنید؟
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/hacker_manifesto.html> 
+		   
+		     بیانیه هکرها
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/being_hacker.html> 
+		   
+		     چگونه هکر شویم
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/how_to_learn_x.html> 
+		   
+		     چگونه فلان چیز رو یاد بگیرم
+		   
+		</a>
+      
+        
+		<a class="list-group-item" href=/chapters/concentrate.html> 
+		   
+		     ایجاد انگیزه و تمرکز
+		   
+		</a>
+      
+      <p></p>
+      <div class="alert alert-success support" role="alert">
+      <a href=/support.html>از این پروژه حمایت کنید</a>
+      </div>
+
+ 
+    </div> <!--left menu-->
+    
+    
+    
+  </div> <!-- content row -->
+  </div> <!-- row full page -->
+  </div>
+  </div>
+
+  <div class="well">
+	<p class="footer">
+		کتاب لینوکس و زندگی کاری است از 
+		<a href="http://jadi.net">جادی</a> روی 
+		<a href="https://github.com/jadijadi/justforfun">گیت هاب</a>
+		<br />
+		<a href=/>روی جلد</a> | <a href="/support.html">حمایت</a> | <a href="/about.html">درباره</a>
+	</p>
+  </div >
+
+
+
+</div > <!-- main container -->
+</body >
+</html > 
+
