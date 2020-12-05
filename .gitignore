@@ -3,3 +3,13 @@ node_modules/
 out/
 *kate-swp
 .DS_Store
+
+
+# Ignore LATEX files
+commands.log
+main.aux
+main.log
+main.out
+main.synctex.gz
+main.toc
+sec*.aux
