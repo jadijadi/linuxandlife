@@ -161,11 +161,13 @@ title: لینوکس ویندوز نیست
 
 حالا اگر بخواهید <strong>پنج</strong> کلمه را Ctrl+X کنید چه؟ به اول کلمه بروید و بعد Ctrl+Shift+Right را فشار دهید و بعد
 
-<pre >Ctrl+Shift+Right
+```
 Ctrl+Shift+Right
 Ctrl+Shift+Right
 Ctrl+Shift+Right
-Ctrl+X</pre >
+Ctrl+Shift+Right
+Ctrl+X
+```
 
 و در vi؟ d5w که در اصل همان Delete 5 words است.
 
