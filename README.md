@@ -2,7 +2,7 @@
 
 
 # To-Do:
-- [ ] Export to ePub
+- [ ] Export to ePub  
 - [ ] Export to PDF
 - [ ] Redesign _thx for support_ page
 - [ ] Move support info (like: bank account, PayPal email and Zarrin Card) to config and show them if something exists.
