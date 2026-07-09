@@ -1,0 +1,31 @@
+[book]
+title = "لینوکس و زندگی"
+authors = ["jadi"]
+description = "کتابی برای کشف دنیای پشت لینوکس و درک بهتر از زندگی"
+language = "fa"
+text-direction = "rtl"
+src = "src"
+
+[output.html]
+git-repository-url = "https://github.com/jadijadi/linuxandlife"
+edit-url-template = "https://github.com/jadijadi/linuxandlife/edit/master/src/documents/chapters/{path}"
+no-section-label = false
+additional-css = ["theme/custom.css"]
+default-theme = "light"
+preferred-dark-theme = "navy"
+mathjax-support = false
+git-repository-icon = "fab-github"
+
+[output.html.search]
+enable = true
+limit-results = 20
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 1
+boost-paragraph = 1
+expand = true
+heading-split-level = 3
+
+[output.html.fold]
+enable = true
+level = 1

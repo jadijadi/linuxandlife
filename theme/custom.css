@@ -1,0 +1,374 @@
+/* ============================================================
+   لینوکس و زندگی — Custom Theme
+   A Persian (RTL) book about Linux & the command line.
+   Visual identity: warm "amber terminal" accent + real terminal-
+   window chrome on code blocks — the one place this book's
+   subject gets to be the literal hero of the page.
+   ============================================================ */
+
+/* ── Fonts: Vazirmatn (Persian/Arabic) + JetBrains Mono (code) ── */
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ── Design tokens ──────────────────────────────────────────── */
+:root {
+    --accent: #c1632f;
+    --accent-strong: #9c4d22;
+    --accent-soft: rgba(193, 99, 47, 0.12);
+    --accent-soft-2: rgba(193, 99, 47, 0.22);
+}
+
+/* Warmer, brighter accent on the dark built-in themes so it still pops */
+html.navy, html.coal, html.ayu {
+    --accent: #e7a063;
+    --accent-strong: #f0b87f;
+    --accent-soft: rgba(231, 160, 99, 0.16);
+    --accent-soft-2: rgba(231, 160, 99, 0.28);
+}
+
+/* ── Base ── */
+html { direction: rtl; }
+
+body {
+    font-family: 'Vazirmatn', 'Tahoma', 'Arial', sans-serif;
+    direction: rtl;
+}
+
+::selection {
+    background: var(--accent-soft-2);
+}
+
+/* ── Sidebar ── */
+.sidebar {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Vazirmatn', 'Tahoma', 'Arial', sans-serif;
+}
+
+.sidebar .sidebar-scrollbox {
+    padding: 14px 16px 14px 6px;
+}
+
+.sidebar .sidebar-title,
+.sidebar h1 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding-bottom: 0.6em;
+    margin-bottom: 0.6em;
+    border-bottom: 2px solid var(--accent);
+}
+
+.chapter li a,
+.chapter li div {
+    text-align: right;
+    direction: rtl;
+    border-radius: 6px;
+    padding: 0.35em 0.7em;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.chapter li a:hover {
+    background-color: var(--accent-soft);
+}
+
+/* Active chapter — accent pill on the leading (right) edge */
+.chapter li.chapter-item.expanded > a,
+.chapter li a.active {
+    font-weight: 700;
+    color: var(--accent-strong);
+    background-color: var(--accent-soft);
+    border-right: 3px solid var(--accent);
+    padding-right: calc(0.7em - 3px);
+}
+
+.chapter .section {
+    font-size: 0.92em;
+}
+
+/* Part titles in the sidebar (the "# ..." headings in SUMMARY.md) */
+.chapter-item.affix {
+    font-weight: 700;
+    font-size: 0.82em;
+    letter-spacing: 0.02em;
+    color: var(--accent-strong);
+    opacity: 0.9;
+    text-transform: none;
+    margin-top: 1.1em;
+    padding-top: 0.7em;
+    border-top: 1px solid var(--table-border-color);
+}
+
+.chapter-item.affix:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+/* ── Main content area ── */
+.content main {
+    direction: rtl;
+    text-align: right;
+    max-width: 760px;
+}
+
+/* ── Typography ── */
+p {
+    line-height: 2.05;
+    font-size: 1.05rem;
+    margin-bottom: 1.1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.5;
+    scroll-margin-top: 1em;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2.1rem;
+    margin-bottom: 0.7em;
+    padding-bottom: 0.4em;
+    border-bottom: 3px solid var(--accent);
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 1.45rem;
+    margin-top: 2.2em;
+    margin-bottom: 0.6em;
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid var(--table-border-color);
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 1.18rem;
+    margin-top: 1.6em;
+    margin-bottom: 0.55em;
+    color: var(--accent-strong);
+}
+
+h4, h5, h6 {
+    font-weight: 600;
+    margin-top: 1.3em;
+}
+
+/* ── Links ── */
+a {
+    color: var(--accent-strong);
+    text-decoration: none;
+    text-underline-offset: 0.2em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.content main a:not(.header) {
+    border-bottom: 1px solid var(--accent-soft-2);
+}
+
+.content main a:not(.header):hover {
+    border-bottom-color: var(--accent-strong);
+}
+
+/* ── Blockquotes ── */
+blockquote {
+    position: relative;
+    border-right: 4px solid var(--accent);
+    border-left: none;
+    padding: 0.7em 1.3em 0.7em 1em;
+    margin: 1.6em 0;
+    border-radius: 0 8px 8px 0;
+    background-color: var(--quote-bg);
+    font-style: normal;
+    line-height: 2;
+}
+
+blockquote p {
+    margin-bottom: 0;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* Stub / notice-style blockquotes get a warmer flag */
+blockquote:has(> p:first-child:only-child) {
+    border-right-color: var(--terminal-dot-amber);
+}
+
+/* ── Code blocks — simple, clean style ── */
+pre {
+    direction: ltr;
+    text-align: left;
+    unicode-bidi: isolate;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 0.87rem;
+    line-height: 1.7;
+    background: var(--quote-bg);
+    border: 1px solid var(--table-border-color);
+    border-radius: 6px;
+    padding: 1.1em 1.3em;
+    overflow-x: auto;
+    margin: 1.6em 0;
+}
+
+pre code {
+    background: none;
+}
+
+/* Inline code */
+code {
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 0.875em;
+    padding: 0.15em 0.45em;
+    border-radius: 4px;
+    background-color: var(--inline-code-color);
+    word-break: break-all;
+}
+
+pre code {
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+    word-break: normal;
+}
+
+/* ── Tables — RTL-aware ── */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.6em 0;
+    font-size: 0.96rem;
+    text-align: right;
+    direction: rtl;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background-color: var(--accent-soft);
+    color: var(--accent-strong);
+    font-weight: 700;
+    padding: 0.65em 1em;
+    border: 1px solid var(--table-border-color);
+}
+
+td {
+    padding: 0.55em 1em;
+    border: 1px solid var(--table-border-color);
+    vertical-align: top;
+    line-height: 1.9;
+}
+
+tr:nth-child(even) {
+    background-color: var(--quote-bg);
+}
+
+/* ── Chapter navigation arrows ── */
+.nav-chapters {
+    direction: ltr; /* keep arrow icons rendering correctly */
+}
+
+.nav-chapters .previous { order: 2; }
+.nav-chapters .next { order: 1; }
+
+.nav-chapters a {
+    border-radius: 8px;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.nav-chapters a:hover {
+    background-color: var(--accent-soft);
+    border-color: var(--accent);
+}
+
+/* ── Lists ── */
+ul, ol {
+    padding-right: 2em;
+    padding-left: 0;
+    line-height: 2;
+}
+
+li { margin-bottom: 0.3em; }
+
+li::marker {
+    color: var(--accent);
+}
+
+/* ── Images ── */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.6em auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px -6px rgba(0, 0, 0, 0.25);
+}
+
+/* ── Horizontal rule ── */
+hr {
+    border: none;
+    border-top: 1px solid var(--table-border-color);
+    margin: 2.6em 0;
+}
+
+/* ── Search box ── */
+#searchbar {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Vazirmatn', sans-serif;
+    border-radius: 8px;
+}
+
+#searchbar:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+mark {
+    background-color: var(--accent-soft-2);
+    color: inherit;
+    border-radius: 3px;
+}
+
+/* ── Top menu bar accents ── */
+#menu-bar i, #menu-bar .icon-button {
+    transition: color 0.15s ease;
+}
+
+#menu-bar i:hover {
+    color: var(--accent);
+}
+
+/* ── Print ── */
+@media print {
+    body, .content main {
+        direction: rtl;
+        font-family: 'Vazirmatn', 'Tahoma', serif;
+    }
+    pre, code {
+        direction: ltr;
+    }
+    pre {
+        border: 1px solid var(--table-border-color);
+    }
+}
+
+/* ── Small screens ── */
+@media (max-width: 580px) {
+    h1 { font-size: 1.65rem; }
+    h2 { font-size: 1.25rem; }
+    .content main { max-width: 100%; }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+    .chapter li a, .nav-chapters a, #menu-bar i {
+        transition: none;
+    }
+}
