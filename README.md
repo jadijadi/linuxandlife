@@ -1,31 +1,72 @@
-[کتابی برای کشف دنیای پشت لینوکس و درک بهتر از زندگی](http://www.linuxbook.ir)
+# 🐧 لینوکس و زندگی (Linux and Life)
 
+> **کتابی برای کشف دنیای پشت لینوکس، درک عمیق‌تر از خط فرمان و فلسفهٔ زیستن با ابزارهای آزاد.**  
+> نوشته و تنظیم: **جادی میرمیرانی**
 
-# To-Do:
-- [ ] Export to ePub
-- [ ] Export to PDF
-- [ ] Redesign _thx for support_ page
-- [ ] Move support info (like: bank account, PayPal email and Zarrin Card) to config and show them if something exists.
-- [x] Beautify the NEXT and PREVIOUS chapter
+---
 
+[![Gitab Badge](https://img.shields.io/badge/مطالعه_آنلاین-گیتاب-blueviolet?style=for-the-badge&logo=gitbook)](https://hheydarian.github.io/Gitab/books/book12/)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg?style=for-the-badge)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
 
+---
 
-# Usage:
-Each article should have this header:
-```
+## 📖 درباره کتاب
+
+لینوکس تنها یک سیستم‌عامل برای سرورها یا سیستم‌های خاص مهندسی نیست؛ لینوکس یک **فلسفهٔ زیستن** است. دیدگاهی متکی بر آزادی اطلاعات، کنترل انسان بر ابزارهایی که روزمره با آن‌ها کار می‌کند، و لذت فهمیدن اینکه در پشت پردهٔ پنجره‌های گرافیکی چه می‌گذرد.
+
+در کتاب **«لینوکس و زندگی»**، جادی میرمیرانی با لحن صمیمی، دلنشین و در عین حال فنی خود، ما را به سفری جذاب در دنیای گنو/لینوکس می‌برد. از اولین کلیک‌ها و نصب یک توزیع مناسب دسکتاپ گرفته تا تسلط بر خط فرمان، اتوماسیون، خط لوله‌ها (Pipes)، شبکه، ابزارهای کاربردی روزمره و نهایتاً نگاهی به فرهنگ هکری و اخلاق متن‌باز.
+
+---
+
+## 🚀 نحوه مطالعه
+
+- 🌐 **[نسخه آنلاین و ریسپانسیو در پلتفرم گیتاب](https://hheydarian.github.io/Gitab/books/book12/)** (فهرست کامل، فونت وزیرمتن، جستجو و حالت تاریک)
+- 📂 **مطالعه مستقیم فایل‌های منبع**: تمامی سرفصل‌ها به صورت Markdown تمیز در پوشه [`src/documents/chapters/`](./src/documents/chapters/) در دسترس هستند.
+
+---
+
+## 📑 ساختار و سرفصل‌های اصلی
+
+این کتاب در **۳۵ فصل جامع** تدوین شده و بخش‌های زیر را در بر می‌گیرد:
+
+1. **آغاز سفر و مفاهیم اولیه**: انتخاب توزیع، نصب و اولین گام‌های پس از ورود به لینوکس
+2. **آشنایی با دسکتاپ و ابزارهای روزمره**: نرم‌افزارهای کاربردی، پخش‌کننده‌ها، آفیس و وب
+3. **تسلط بر خط فرمان (CLI)**: فلسفهٔ شل، دستورات پرکاربرد، راهبری فایل‌ها و دسترسی‌ها
+4. **مباحث پیشرفته و سیستم**: خط لوله‌ها، ساختار دایرکتوری‌های لینوکس، اسکریپت‌نویسی و خطاهای متداول
+5. **زندگی دیجیتال و فرهنگ هکری**: نگرش آزاد، حفظ حریم خصوصی، تمرکز و یادگیری پیوسته
+
+---
+
+## 🤝 مشارکت و بهبود کتاب
+
+این کتاب یک پروژهٔ کاملاً آزاد و متن‌باز است. اگر در متن غلط املایی، لینک شکسته یا نیازی به به‌روزرسانی دستورات مشاهده کردید:
+
+1. مخزن را **فورک (Fork)** کنید.
+2. یک شاخهٔ جدید برای تغییرات خود بسازید:
+   ```bash
+   git checkout -b fix/typo-or-update
+   ```
+3. تغییرات خود را روی فایل‌های مربوطه در `src/documents/chapters/` اعمال نمایید.
+4. تغییرات را کامیت و پوش کرده و یک **Pull Request** ارسال کنید.
+
+---
+
+## 📜 ساختار فرانت‌متر (Front-matter) برای فصول جدید
+
+هر فصل جدید باید در بالای فایل مارک‌داون شامل مشخصات زیر باشد:
+
+```yaml
 ---
 layout: article
-chapter: "the name of current chapter"
-order: "article number in book index"
-title: "the name of article"
+chapter: "عنوان بخش یا دسته‌بندی"
+order: 10
+title: "عنوان فصل به زبان فارسی"
 ---
 ```
-Here's an example:
-```
+
 ---
-layout: article
-chapter: اصول و مقدمات
-order: 1
-title: فلسفه آزادی نرم‌افزار
----
-```
+
+## ⚖️ مجوز (License)
+
+این اثر تحت مجوز آزاد **کرییتیو کامنز (Creative Commons Attribution-ShareAlike 4.0 International - CC BY-SA 4.0)** منتشر شده است و استفاده، بازنشر و تغییر آن با ذکر نام نویسنده آزاد است.
